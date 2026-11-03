@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Module1.bas",
+    "lines": 160,
+    "procedures": [
+      "ApplyColumnView",
+      "Reset_View",
+      "Show_Submitted_Quotes",
+      "Show_Open_Projects",
+      "Show_Open_Quotes",
+      "Show_Closed_Projects",
+      "FilterSelectedColumnBySelectedValue"
+    ]
+  },
+  {
+    "name": "ThisWorkbook.cls",
+    "lines": 8,
+    "procedures": []
+  },
+  {
+    "name": "Sheet1.cls",
+    "lines": 8,
+    "procedures": []
+  },
+  {
+    "name": "Sheet3.cls",
+    "lines": 8,
+    "procedures": []
+  },
+  {
+    "name": "Sheet2.cls",
+    "lines": 8,
+    "procedures": []
+  },
+  {
+    "name": "Sheet4.cls",
+    "lines": 8,
+    "procedures": []
+  },
+  {
+    "name": "Sheet5.cls",
+    "lines": 8,
+    "procedures": []
+  }
+]

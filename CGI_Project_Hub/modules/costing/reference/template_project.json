@@ -1,0 +1,339 @@
+{
+  "schema": 1,
+  "id": "template",
+  "name": "DESCRIPTION",
+  "settings": {
+    "quote_no": "T_CXXXYYY00Z ",
+    "project_no": "",
+    "client": "COMPANY",
+    "contact": "CLIENT REPRESENTATIVE",
+    "email": "CLIENT EMAIL",
+    "description": "DESCRIPTION",
+    "currency": "ZAR",
+    "destination": "SITE DESTINATION",
+    "enquiry": "Email",
+    "company": "CONTROLGEAR PRODUCTS (Pty) Ltd",
+    "salesperson": "",
+    "scope": "In response to the requirements outlined by CLIENT COMPANY the scope of work involves providing Designs, Supply & Delivery for PROJECT DESCRIPTION at CLIENT DESTINATION.",
+    "conversion": 15.0,
+    "vat": 0,
+    "date": "2026-10-06",
+    "revision": "00",
+    "notes": "",
+    "markups": [
+      {
+        "name": "MU 1",
+        "label": "MU 1 - Gen Equipment",
+        "components": [
+          {
+            "label": "Cost of money",
+            "value": 2.0
+          },
+          {
+            "label": "Overheads",
+            "value": 4.0
+          },
+          {
+            "label": "Contingencies",
+            "value": 4.0
+          },
+          {
+            "label": "Risk",
+            "value": 4.0
+          },
+          {
+            "label": "Profit",
+            "value": 15.0
+          }
+        ]
+      },
+      {
+        "name": "MU 2",
+        "label": "MU 2 - Special Equipment for panel",
+        "components": [
+          {
+            "label": "Cost of money",
+            "value": 2.0
+          },
+          {
+            "label": "Overheads",
+            "value": 4.0
+          },
+          {
+            "label": "Contingencies",
+            "value": 4.0
+          },
+          {
+            "label": "Risk",
+            "value": 4.0
+          },
+          {
+            "label": "Profit",
+            "value": 15.0
+          }
+        ]
+      },
+      {
+        "name": "MU 3",
+        "label": "MU 3 - HI Risk Items, not sure about actual Cost",
+        "components": [
+          {
+            "label": "Cost of money",
+            "value": 2.0
+          },
+          {
+            "label": "Overheads",
+            "value": 4.0
+          },
+          {
+            "label": "Contingencies",
+            "value": 4.0
+          },
+          {
+            "label": "Risk",
+            "value": 4.0
+          },
+          {
+            "label": "Profit",
+            "value": 15.0
+          }
+        ]
+      },
+      {
+        "name": "MU 4",
+        "label": "MU 4 - OEM Equipment",
+        "components": [
+          {
+            "label": "Niresh Consulting Fee - (Overhead Cost)",
+            "value": 5.0
+          },
+          {
+            "label": "Overheads & Cost of money",
+            "value": 5.0
+          },
+          {
+            "label": "Contingencies",
+            "value": 5.0
+          },
+          {
+            "label": "Risk",
+            "value": 2.0
+          },
+          {
+            "label": "Profit",
+            "value": 10.0
+          }
+        ]
+      },
+      {
+        "name": "MU 5",
+        "label": "MU 5 - Already In",
+        "components": [
+          {
+            "label": "Cost of money",
+            "value": 0.0
+          },
+          {
+            "label": "Overheads",
+            "value": 2.0
+          },
+          {
+            "label": "Contingencies",
+            "value": 0.0
+          },
+          {
+            "label": "Risk",
+            "value": 0.0
+          },
+          {
+            "label": "Profit",
+            "value": 0.0
+          }
+        ]
+      }
+    ]
+  },
+  "groups": [
+    {
+      "id": "g94",
+      "name": "MCC PANEL",
+      "category": "materials",
+      "option": false,
+      "qty": 1.0,
+      "source_row": 94,
+      "lines": [
+        {
+          "id": "l97",
+          "description": "Communication module, CM PtP, RS232, High Feature",
+          "part": "6ES7541-1AD00-0AB0",
+          "supplier": "CGI",
+          "oem": "Siemens",
+          "qty": 1.0,
+          "multiplier": 1.0,
+          "unit": "each",
+          "list": 23.0,
+          "discount": 35.0,
+          "net": 15.0,
+          "sell": 20.0,
+          "mode": "markup",
+          "markup": "MU 1",
+          "cost_category": "CI-PLC-SER",
+          "source": "COSTING!97",
+          "source_row": 97,
+          "lead_days": 0.0,
+          "percent": 0,
+          "notes": ""
+        },
+        {
+          "id": "l101",
+          "description": "General Consumables",
+          "part": "",
+          "supplier": "",
+          "oem": "",
+          "qty": 1,
+          "multiplier": 1.0,
+          "unit": "each",
+          "list": 2.0,
+          "discount": 0,
+          "net": 2.0,
+          "sell": 3.0,
+          "mode": "percent",
+          "markup": "MU 1",
+          "cost_category": "",
+          "source": "COSTING!101",
+          "source_row": 101,
+          "lead_days": 10.0,
+          "percent": 10.0,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "g113",
+      "name": "EQUIPMENT TRANSPORT",
+      "category": "pg",
+      "option": false,
+      "qty": 1.0,
+      "source_row": 113,
+      "lines": []
+    },
+    {
+      "id": "g126",
+      "name": "SITE COMMISSIONING (1 weeks)",
+      "category": "pg",
+      "option": false,
+      "qty": 1.0,
+      "source_row": 126,
+      "lines": []
+    },
+    {
+      "id": "g138",
+      "name": "ENGINEERING & PM",
+      "category": "labour",
+      "option": false,
+      "qty": 1.0,
+      "source_row": 138,
+      "lines": []
+    },
+    {
+      "id": "g143",
+      "name": "TESTING & FAT",
+      "category": "labour",
+      "option": false,
+      "qty": 1.0,
+      "source_row": 143,
+      "lines": []
+    },
+    {
+      "id": "g149",
+      "name": "COMMISSIONING",
+      "category": "labour",
+      "option": false,
+      "qty": 1.0,
+      "source_row": 149,
+      "lines": []
+    },
+    {
+      "id": "g163",
+      "name": "MCC PANEL",
+      "category": "materials",
+      "option": true,
+      "qty": 1.0,
+      "source_row": 163,
+      "lines": []
+    },
+    {
+      "id": "g182",
+      "name": "EQUIPMENT TRANSPORT",
+      "category": "pg",
+      "option": true,
+      "qty": 1.0,
+      "source_row": 182,
+      "lines": []
+    },
+    {
+      "id": "g195",
+      "name": "SITE COMMISSIONING (1 weeks)",
+      "category": "pg",
+      "option": true,
+      "qty": 1.0,
+      "source_row": 195,
+      "lines": []
+    },
+    {
+      "id": "g207",
+      "name": "ENGINEERING & PM",
+      "category": "labour",
+      "option": true,
+      "qty": 1.0,
+      "source_row": 207,
+      "lines": []
+    },
+    {
+      "id": "g212",
+      "name": "TESTING & FAT",
+      "category": "labour",
+      "option": true,
+      "qty": 1.0,
+      "source_row": 212,
+      "lines": []
+    },
+    {
+      "id": "g218",
+      "name": "COMMISSIONING",
+      "category": "labour",
+      "option": true,
+      "qty": 1.0,
+      "source_row": 218,
+      "lines": []
+    }
+  ],
+  "payments": [
+    {
+      "description": "On design submittal:",
+      "percent": 20.0
+    },
+    {
+      "description": "On hardware FAT:",
+      "percent": 60.0
+    },
+    {
+      "description": "On delivery:",
+      "percent": 10.0
+    },
+    {
+      "description": "After commissioning:",
+      "percent": 10.0
+    }
+  ],
+  "source_file": "workbook.xlsm",
+  "source_totals": {
+    "materials": 23.0,
+    "pg": 0.0,
+    "labour": 0.0
+  },
+  "import_warnings": [
+    "Workbook values are saved Excel caches; macros and external links were not run.",
+    "Rate sources include test data. Review prices before quoting."
+  ]
+}

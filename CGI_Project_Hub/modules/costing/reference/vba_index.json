@@ -1,0 +1,265 @@
+[
+  {
+    "name": "ThisWorkbook.cls",
+    "stream": "VBA/ThisWorkbook",
+    "lines": 336,
+    "procedures": [
+      "showInpuForm",
+      "CopyTemplatePanelArea",
+      "CopyTemplateGeneralArea",
+      "CopyTemplatePGArea",
+      "CopyTemplateServiceArea",
+      "CopyLevel3Area",
+      "NewMaterialRatesLine",
+      "NewMaretialManualLine",
+      "NewLabourManualLine",
+      "NewLabourRatesLine",
+      "CopyTemplateMain",
+      "NewAdditionalCaptureLine",
+      "NewLevel1",
+      "NewLevel2",
+      "NewLevel3",
+      "Workbook_BeforePrint",
+      "Workbook_Open",
+      "Workbook_WindowActivate",
+      "Print_Start"
+    ]
+  },
+  {
+    "name": "Sheet1.cls",
+    "stream": "VBA/Sheet1",
+    "lines": 16,
+    "procedures": [
+      "Worksheet_SelectionChange",
+      "Build_Scope"
+    ]
+  },
+  {
+    "name": "Sheet2.cls",
+    "stream": "VBA/Sheet2",
+    "lines": 8,
+    "procedures": []
+  },
+  {
+    "name": "Sheet3.cls",
+    "stream": "VBA/Sheet3",
+    "lines": 10,
+    "procedures": []
+  },
+  {
+    "name": "Sheet4.cls",
+    "stream": "VBA/Sheet4",
+    "lines": 8,
+    "procedures": []
+  },
+  {
+    "name": "Sheet5.cls",
+    "stream": "VBA/Sheet5",
+    "lines": 8,
+    "procedures": []
+  },
+  {
+    "name": "Module1.bas",
+    "stream": "VBA/Module1",
+    "lines": 70,
+    "procedures": [
+      "Hide_TC_Rows",
+      "Hide_TCStandard_Rows",
+      "GoToNamedRange"
+    ]
+  },
+  {
+    "name": "Module2.bas",
+    "stream": "VBA/Module2",
+    "lines": 124,
+    "procedures": [
+      "Show_All_Columns",
+      "Print_Rows_Show",
+      "Print_Rows_Hide",
+      "Invoice_Rows_Show",
+      "Invoice_Rows_Hide",
+      "Hide_Template_Area",
+      "Hide_Show_Columns"
+    ]
+  },
+  {
+    "name": "Sheet6.cls",
+    "stream": "VBA/Sheet6",
+    "lines": 9,
+    "procedures": []
+  },
+  {
+    "name": "Sheet7.cls",
+    "stream": "VBA/Sheet7",
+    "lines": 9,
+    "procedures": []
+  },
+  {
+    "name": "Sheet8.cls",
+    "stream": "VBA/Sheet8",
+    "lines": 381,
+    "procedures": [
+      "openInputForm",
+      "Worksheet_Activate",
+      "ShowHide_TC_Rows",
+      "CheckTotals",
+      "Insert_CF",
+      "Insert_CF_Options",
+      "ManHours_Button",
+      "ProjectInput_Button",
+      "Timeline_Button",
+      "Payment_Button",
+      "Validity_Button",
+      "Incoterms_Button",
+      "TaxCert_Button",
+      "Inclusions_Button",
+      "Assumptions_Button",
+      "Options_Button"
+    ]
+  },
+  {
+    "name": "modUpdateRatesTable.bas",
+    "stream": "VBA/modUpdateRatesTable",
+    "lines": 62,
+    "procedures": [
+      "UpdateRates"
+    ]
+  },
+  {
+    "name": "Scope_Form.frm",
+    "stream": "VBA/Scope_Form",
+    "lines": 53,
+    "procedures": [
+      "Confirm_But_Click"
+    ]
+  },
+  {
+    "name": "Sheet9.cls",
+    "stream": "VBA/Sheet9",
+    "lines": 192,
+    "procedures": [
+      "Worksheet_Activate",
+      "ShowHide_TC_Rows",
+      "Insert_CF",
+      "ManHours_Button",
+      "ProjectInput_Button",
+      "Timeline_Button",
+      "Payment_Button",
+      "Validity_Button",
+      "Incoterms_Button",
+      "TaxCert_Button",
+      "Inclusions_Button"
+    ]
+  },
+  {
+    "name": "Input_Form.frm",
+    "stream": "VBA/Input_Form",
+    "lines": 636,
+    "procedures": [
+      "loadCurrentData",
+      "btnAccept_Click",
+      "btnPayDesc_Edit_Click",
+      "btnScope_Click",
+      "btnTimelineDesc_Edit_Click",
+      "cbInputs_ManHours_Change",
+      "cmCurrency_Change",
+      "cmDocType_Change",
+      "cmInputs_Incoterms_Change",
+      "cmSupp_Company_Change",
+      "cmSupp_Person_Change",
+      "cmTimelineUnit_Change",
+      "txtClient_Comp_Change",
+      "txtClient_Email_Change",
+      "txtClient_EnquiryRef_Change",
+      "txtClient_FinalDest_Change",
+      "txtClient_Name_Change",
+      "txtInputs_IncotermsDest_Change",
+      "txtPay_Perc1_Change",
+      "UpdatePaymentTotal",
+      "txtPay_Perc10_Change",
+      "txtPay_Perc11_Change",
+      "txtPay_Perc12_Change",
+      "txtPay_Perc2_Change",
+      "txtPay_Perc3_Change",
+      "txtPay_Perc4_Change",
+      "txtPay_Perc5_Change",
+      "txtPay_Perc6_Change",
+      "txtPay_Perc7_Change",
+      "txtPay_Perc8_Change",
+      "txtPay_Perc9_Change",
+      "txtProj_ConversionRate_Change",
+      "txtProj_Desc_Change",
+      "txtProj_No_Change",
+      "UpdateTitle",
+      "txtProj_Scope_Change",
+      "txtQuote_No_Change",
+      "UserForm_Initialize"
+    ]
+  },
+  {
+    "name": "Sheet10.cls",
+    "stream": "VBA/Sheet10",
+    "lines": 9,
+    "procedures": []
+  },
+  {
+    "name": "modUpdateMasterTable.bas",
+    "stream": "VBA/modUpdateMasterTable",
+    "lines": 127,
+    "procedures": [
+      "UpdateMaster",
+      "UpdateMasterTable",
+      "UpdateRelationShipTables"
+    ]
+  },
+  {
+    "name": "Module3.bas",
+    "stream": "VBA/Module3",
+    "lines": 111,
+    "procedures": [
+      "CopyTableContentsAcrossWorkbooks"
+    ]
+  },
+  {
+    "name": "Sheet13.cls",
+    "stream": "VBA/Sheet13",
+    "lines": 8,
+    "procedures": []
+  },
+  {
+    "name": "Sheet11.cls",
+    "stream": "VBA/Sheet11",
+    "lines": 11,
+    "procedures": [
+      "Worksheet_Deactivate"
+    ]
+  },
+  {
+    "name": "modSortPartsLists.bas",
+    "stream": "VBA/modSortPartsLists",
+    "lines": 38,
+    "procedures": [
+      "SortTableAlphabetically"
+    ]
+  },
+  {
+    "name": "Sheet12.cls",
+    "stream": "VBA/Sheet12",
+    "lines": 111,
+    "procedures": [
+      "Worksheet_Deactivate"
+    ]
+  },
+  {
+    "name": "Sheet14.cls",
+    "stream": "VBA/Sheet14",
+    "lines": 8,
+    "procedures": []
+  },
+  {
+    "name": "Module4.bas",
+    "stream": "VBA/Module4",
+    "lines": 1,
+    "procedures": []
+  }
+]

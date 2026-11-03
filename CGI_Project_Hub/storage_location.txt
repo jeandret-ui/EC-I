@@ -1,0 +1,3 @@
+# Folder where CGI Project Hub keeps ALL project data (everything except the program itself).
+# Change the line below to move it, then restart the hub. Copy the old folder's contents across first.
+C:\Users\Jeandre.t\OneDrive - Instramac\Desktop\Local Dashboard Storage

@@ -1,0 +1,2801 @@
+{
+ "tasks": {
+  "label": "Schedule tasks",
+  "singular": "Task",
+  "section": "project",
+  "title": "title",
+  "fields": [
+   {
+    "k": "wbs",
+    "t": "text",
+    "label": "WBS",
+    "req": true
+   },
+   {
+    "k": "title",
+    "t": "text",
+    "label": "Task",
+    "req": true
+   },
+   {
+    "k": "workstream",
+    "t": "select",
+    "label": "Workstream",
+    "options": [
+     "Project management",
+     "Engineering & design",
+     "Procurement",
+     "Panel manufacture",
+     "FAT",
+     "Logistics",
+     "Site works",
+     "Installation",
+     "Commissioning",
+     "SAT",
+     "Handover & close-out",
+     "Commercial"
+    ]
+   },
+   {
+    "k": "status",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "Not started",
+     "In progress",
+     "On hold",
+     "Blocked",
+     "Complete"
+    ],
+    "default": "Not started"
+   },
+   {
+    "k": "priority",
+    "t": "select",
+    "label": "Priority",
+    "options": [
+     "Low",
+     "Normal",
+     "High",
+     "Critical"
+    ],
+    "default": "Normal"
+   },
+   {
+    "k": "location",
+    "t": "text",
+    "label": "Location / site"
+   },
+   {
+    "k": "owner",
+    "t": "text",
+    "label": "Owner"
+   },
+   {
+    "k": "duration_days",
+    "t": "number",
+    "label": "Duration (work days)"
+   },
+   {
+    "k": "predecessors",
+    "t": "text",
+    "label": "Predecessors (WBS, e.g. 2.1, 3.3+5)"
+   },
+   {
+    "k": "baseline_start",
+    "t": "date",
+    "label": "Baseline start"
+   },
+   {
+    "k": "baseline_finish",
+    "t": "date",
+    "label": "Baseline finish"
+   },
+   {
+    "k": "forecast_start",
+    "t": "date",
+    "label": "Forecast start"
+   },
+   {
+    "k": "forecast_finish",
+    "t": "date",
+    "label": "Forecast finish"
+   },
+   {
+    "k": "actual_start",
+    "t": "date",
+    "label": "Actual start"
+   },
+   {
+    "k": "actual_finish",
+    "t": "date",
+    "label": "Actual finish"
+   },
+   {
+    "k": "progress",
+    "t": "pct",
+    "label": "Progress %"
+   },
+   {
+    "k": "is_milestone",
+    "t": "bool",
+    "label": "Milestone"
+   },
+   {
+    "k": "cost_code",
+    "t": "text",
+    "label": "Cost code"
+   },
+   {
+    "k": "notes",
+    "t": "longtext",
+    "label": "Notes"
+   },
+   {
+    "k": "needs",
+    "t": "json",
+    "label": "Ready to start"
+   },
+   {
+    "k": "commit",
+    "t": "json",
+    "label": "Committed weeks"
+   },
+   {
+    "k": "miss_reason",
+    "t": "select",
+    "label": "Why not done as planned",
+    "options": [
+     "",
+     "Materials / equipment late",
+     "Drawings / information",
+     "Access / permits",
+     "People not available",
+     "Tools",
+     "Work before it late",
+     "Client / site not ready",
+     "Weather",
+     "Rework",
+     "Other"
+    ]
+   }
+  ],
+  "list": [
+   "wbs",
+   "title",
+   "workstream",
+   "owner",
+   "forecast_start",
+   "forecast_finish",
+   "progress",
+   "status"
+  ],
+  "closed": {
+   "status": [
+    "Complete"
+   ],
+   "progress": [
+    100
+   ]
+  },
+  "due": "forecast_finish",
+  "ai": [
+   "update"
+  ],
+  "sort": "wbs"
+ },
+ "actions": {
+  "label": "Actions & to-dos",
+  "singular": "Action",
+  "section": "project",
+  "title": "title",
+  "fields": [
+   {
+    "k": "title",
+    "t": "text",
+    "label": "Action",
+    "req": true
+   },
+   {
+    "k": "owner",
+    "t": "text",
+    "label": "Owner"
+   },
+   {
+    "k": "due_date",
+    "t": "date",
+    "label": "Due"
+   },
+   {
+    "k": "priority",
+    "t": "select",
+    "label": "Priority",
+    "options": [
+     "Low",
+     "Normal",
+     "High",
+     "Critical"
+    ],
+    "default": "Normal"
+   },
+   {
+    "k": "status",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "Open",
+     "In progress",
+     "Waiting",
+     "Closed"
+    ],
+    "default": "Open"
+   },
+   {
+    "k": "category",
+    "t": "select",
+    "label": "Type",
+    "options": [
+     "Action",
+     "To-do",
+     "Follow-up",
+     "Reminder"
+    ],
+    "default": "Action"
+   },
+   {
+    "k": "task_id",
+    "t": "ref",
+    "label": "Related task",
+    "ref": "tasks"
+   },
+   {
+    "k": "meeting_id",
+    "t": "ref",
+    "label": "From meeting",
+    "ref": "meetings"
+   },
+   {
+    "k": "workstream",
+    "t": "select",
+    "label": "Workstream",
+    "options": [
+     "Project management",
+     "Engineering & design",
+     "Procurement",
+     "Panel manufacture",
+     "FAT",
+     "Logistics",
+     "Site works",
+     "Installation",
+     "Commissioning",
+     "SAT",
+     "Handover & close-out",
+     "Commercial"
+    ]
+   },
+   {
+    "k": "reminder_date",
+    "t": "date",
+    "label": "Remind me on"
+   },
+   {
+    "k": "completed_date",
+    "t": "date",
+    "label": "Completed"
+   },
+   {
+    "k": "source",
+    "t": "text",
+    "label": "Source"
+   },
+   {
+    "k": "notes",
+    "t": "longtext",
+    "label": "Notes"
+   }
+  ],
+  "list": [
+   "title",
+   "category",
+   "owner",
+   "due_date",
+   "priority",
+   "status"
+  ],
+  "closed": {
+   "status": [
+    "Closed"
+   ]
+  },
+  "due": "due_date",
+  "ai": [
+   "create",
+   "update"
+  ],
+  "sort": null
+ },
+ "risks": {
+  "label": "Risks",
+  "singular": "Risk",
+  "section": "project",
+  "title": "title",
+  "fields": [
+   {
+    "k": "title",
+    "t": "text",
+    "label": "Risk",
+    "req": true
+   },
+   {
+    "k": "cause",
+    "t": "longtext",
+    "label": "Cause"
+   },
+   {
+    "k": "category",
+    "t": "select",
+    "label": "Category",
+    "options": [
+     "Technical",
+     "Schedule",
+     "Commercial",
+     "Site / HSE",
+     "Supply chain",
+     "Client",
+     "Regulatory"
+    ],
+    "default": "Technical"
+   },
+   {
+    "k": "response",
+    "t": "select",
+    "label": "Response",
+    "options": [
+     "Avoid",
+     "Mitigate",
+     "Transfer",
+     "Accept",
+     "Exploit"
+    ],
+    "default": "Mitigate"
+   },
+   {
+    "k": "contingency",
+    "t": "longtext",
+    "label": "Contingency plan"
+   },
+   {
+    "k": "owner",
+    "t": "text",
+    "label": "Owner"
+   },
+   {
+    "k": "probability",
+    "t": "number",
+    "label": "Probability (1–5)"
+   },
+   {
+    "k": "impact",
+    "t": "number",
+    "label": "Impact (1–5)"
+   },
+   {
+    "k": "mitigation",
+    "t": "longtext",
+    "label": "Mitigation"
+   },
+   {
+    "k": "due_date",
+    "t": "date",
+    "label": "Review by"
+   },
+   {
+    "k": "status",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "Open",
+     "Mitigating",
+     "Closed",
+     "Occurred"
+    ],
+    "default": "Open"
+   }
+  ],
+  "list": [
+   "title",
+   "category",
+   "owner",
+   "probability",
+   "impact",
+   "status"
+  ],
+  "closed": {
+   "status": [
+    "Closed"
+   ]
+  },
+  "due": "due_date",
+  "ai": [
+   "create",
+   "update"
+  ],
+  "sort": null
+ },
+ "issues": {
+  "label": "Issues",
+  "singular": "Issue",
+  "section": "project",
+  "title": "title",
+  "fields": [
+   {
+    "k": "title",
+    "t": "text",
+    "label": "Issue",
+    "req": true
+   },
+   {
+    "k": "raised_date",
+    "t": "date",
+    "label": "Raised"
+   },
+   {
+    "k": "raised_by",
+    "t": "text",
+    "label": "Raised by"
+   },
+   {
+    "k": "category",
+    "t": "select",
+    "label": "Category",
+    "options": [
+     "Technical",
+     "Site",
+     "Commercial",
+     "Client",
+     "Supplier",
+     "HSE"
+    ],
+    "default": "Technical"
+   },
+   {
+    "k": "owner",
+    "t": "text",
+    "label": "Owner"
+   },
+   {
+    "k": "due_date",
+    "t": "date",
+    "label": "Resolve by"
+   },
+   {
+    "k": "priority",
+    "t": "select",
+    "label": "Priority",
+    "options": [
+     "Low",
+     "Normal",
+     "High",
+     "Critical"
+    ],
+    "default": "Normal"
+   },
+   {
+    "k": "resolution",
+    "t": "longtext",
+    "label": "Resolution"
+   },
+   {
+    "k": "status",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "Open",
+     "In progress",
+     "Resolved"
+    ],
+    "default": "Open"
+   }
+  ],
+  "list": [
+   "title",
+   "owner",
+   "due_date",
+   "priority",
+   "status"
+  ],
+  "closed": {
+   "status": [
+    "Resolved"
+   ]
+  },
+  "due": "due_date",
+  "ai": [
+   "create",
+   "update"
+  ],
+  "sort": null
+ },
+ "decisions": {
+  "label": "Decisions",
+  "singular": "Decision",
+  "section": "project",
+  "title": "title",
+  "fields": [
+   {
+    "k": "title",
+    "t": "text",
+    "label": "Decision",
+    "req": true
+   },
+   {
+    "k": "decision_date",
+    "t": "date",
+    "label": "Date"
+   },
+   {
+    "k": "made_by",
+    "t": "text",
+    "label": "Made by"
+   },
+   {
+    "k": "rationale",
+    "t": "longtext",
+    "label": "Rationale"
+   },
+   {
+    "k": "status",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "Active",
+     "Superseded"
+    ],
+    "default": "Active"
+   },
+   {
+    "k": "meeting_id",
+    "t": "ref",
+    "label": "From meeting",
+    "ref": "meetings"
+   }
+  ],
+  "list": [
+   "decision_date",
+   "title",
+   "made_by",
+   "status"
+  ],
+  "closed": {},
+  "due": null,
+  "ai": [
+   "create"
+  ],
+  "sort": "-decision_date"
+ },
+ "meetings": {
+  "label": "Meetings",
+  "singular": "Meeting",
+  "section": "project",
+  "title": "title",
+  "fields": [
+   {
+    "k": "title",
+    "t": "text",
+    "label": "Meeting",
+    "req": true
+   },
+   {
+    "k": "meeting_date",
+    "t": "date",
+    "label": "Date"
+   },
+   {
+    "k": "meeting_type",
+    "t": "select",
+    "label": "Type",
+    "options": [
+     "Kick-off",
+     "Progress",
+     "Technical",
+     "Design review",
+     "Site",
+     "FAT",
+     "SAT",
+     "Commercial",
+     "Internal",
+     "Close-out"
+    ],
+    "default": "Progress"
+   },
+   {
+    "k": "start_time",
+    "t": "text",
+    "label": "Start time (HH:MM)"
+   },
+   {
+    "k": "duration_min",
+    "t": "number",
+    "label": "Duration (min)",
+    "default": 60
+   },
+   {
+    "k": "location",
+    "t": "text",
+    "label": "Location / link"
+   },
+   {
+    "k": "chair",
+    "t": "text",
+    "label": "Chair"
+   },
+   {
+    "k": "apologies",
+    "t": "text",
+    "label": "Apologies"
+   },
+   {
+    "k": "agenda",
+    "t": "longtext",
+    "label": "Agenda"
+   },
+   {
+    "k": "status",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "Planned",
+     "Held",
+     "Minutes issued",
+     "Cancelled"
+    ],
+    "default": "Planned"
+   },
+   {
+    "k": "next_meeting",
+    "t": "date",
+    "label": "Next meeting"
+   },
+   {
+    "k": "attendees",
+    "t": "text",
+    "label": "Attendees"
+   },
+   {
+    "k": "notes",
+    "t": "longtext",
+    "label": "General notes"
+   }
+  ],
+  "list": [
+   "meeting_date",
+   "start_time",
+   "title",
+   "meeting_type",
+   "status"
+  ],
+  "closed": {},
+  "due": "meeting_date",
+  "ai": [
+   "create"
+  ],
+  "sort": "-meeting_date"
+ },
+ "daily_logs": {
+  "label": "Daily log",
+  "singular": "Diary entry",
+  "section": "project",
+  "title": "activities",
+  "fields": [
+   {
+    "k": "log_date",
+    "t": "date",
+    "label": "Date",
+    "req": true
+   },
+   {
+    "k": "author",
+    "t": "text",
+    "label": "Author"
+   },
+   {
+    "k": "location",
+    "t": "text",
+    "label": "Location"
+   },
+   {
+    "k": "weather",
+    "t": "text",
+    "label": "Weather"
+   },
+   {
+    "k": "on_site",
+    "t": "text",
+    "label": "On site"
+   },
+   {
+    "k": "activities",
+    "t": "longtext",
+    "label": "Activities"
+   },
+   {
+    "k": "delays",
+    "t": "longtext",
+    "label": "Delays and problems"
+   },
+   {
+    "k": "notes",
+    "t": "longtext",
+    "label": "Notes"
+   }
+  ],
+  "list": [
+   "log_date",
+   "location",
+   "activities",
+   "delays"
+  ],
+  "closed": {},
+  "due": null,
+  "ai": [
+   "create"
+  ],
+  "sort": "-log_date"
+ },
+ "requirements": {
+  "label": "Requirements register",
+  "singular": "Requirement",
+  "section": "technical",
+  "title": "text",
+  "fields": [
+   {
+    "k": "ref",
+    "t": "text",
+    "label": "Ref",
+    "req": true
+   },
+   {
+    "k": "area",
+    "t": "text",
+    "label": "Area"
+   },
+   {
+    "k": "text",
+    "t": "longtext",
+    "label": "Requirement",
+    "req": true
+   },
+   {
+    "k": "source",
+    "t": "text",
+    "label": "Source"
+   },
+   {
+    "k": "status",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "Open",
+     "Compliant",
+     "Partially compliant",
+     "Non-compliant",
+     "Clarification needed"
+    ],
+    "default": "Open"
+   },
+   {
+    "k": "owner",
+    "t": "text",
+    "label": "Owner"
+   },
+   {
+    "k": "verification_method",
+    "t": "text",
+    "label": "Verification"
+   },
+   {
+    "k": "design_response",
+    "t": "longtext",
+    "label": "Design response"
+   }
+  ],
+  "list": [
+   "ref",
+   "area",
+   "text",
+   "status",
+   "verification_method"
+  ],
+  "closed": {},
+  "due": null,
+  "ai": [],
+  "sort": "ref"
+ },
+ "deliverables": {
+  "label": "Deliverables",
+  "singular": "Deliverable",
+  "section": "technical",
+  "title": "title",
+  "fields": [
+   {
+    "k": "ref",
+    "t": "text",
+    "label": "Ref",
+    "req": true
+   },
+   {
+    "k": "title",
+    "t": "text",
+    "label": "Deliverable",
+    "req": true
+   },
+   {
+    "k": "owner",
+    "t": "text",
+    "label": "Owner"
+   },
+   {
+    "k": "revision",
+    "t": "text",
+    "label": "Revision"
+   },
+   {
+    "k": "baseline_due",
+    "t": "date",
+    "label": "Baseline due"
+   },
+   {
+    "k": "forecast_due",
+    "t": "date",
+    "label": "Forecast due"
+   },
+   {
+    "k": "submitted_date",
+    "t": "date",
+    "label": "Submitted"
+   },
+   {
+    "k": "status",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "Outstanding",
+     "In progress",
+     "Submitted",
+     "Approved",
+     "Rejected"
+    ],
+    "default": "Outstanding"
+   },
+   {
+    "k": "comments",
+    "t": "longtext",
+    "label": "Comments"
+   }
+  ],
+  "list": [
+   "ref",
+   "title",
+   "owner",
+   "revision",
+   "forecast_due",
+   "status"
+  ],
+  "closed": {
+   "status": [
+    "Approved"
+   ]
+  },
+  "due": "forecast_due",
+  "ai": [
+   "update"
+  ],
+  "sort": "ref"
+ },
+ "rfis": {
+  "label": "RFIs and technical queries",
+  "singular": "RFI",
+  "section": "technical",
+  "title": "title",
+  "fields": [
+   {
+    "k": "ref",
+    "t": "text",
+    "label": "Ref",
+    "req": true
+   },
+   {
+    "k": "title",
+    "t": "text",
+    "label": "Subject",
+    "req": true
+   },
+   {
+    "k": "question",
+    "t": "longtext",
+    "label": "Question"
+   },
+   {
+    "k": "raised_to",
+    "t": "text",
+    "label": "Raised to"
+   },
+   {
+    "k": "raised_date",
+    "t": "date",
+    "label": "Raised"
+   },
+   {
+    "k": "required_by",
+    "t": "date",
+    "label": "Response needed by"
+   },
+   {
+    "k": "response",
+    "t": "longtext",
+    "label": "Response"
+   },
+   {
+    "k": "impact",
+    "t": "text",
+    "label": "Impact"
+   },
+   {
+    "k": "status",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "Draft",
+     "Open",
+     "Answered",
+     "Closed"
+    ],
+    "default": "Draft"
+   }
+  ],
+  "list": [
+   "ref",
+   "title",
+   "raised_to",
+   "required_by",
+   "status"
+  ],
+  "closed": {
+   "status": [
+    "Answered",
+    "Closed"
+   ]
+  },
+  "due": "required_by",
+  "ai": [
+   "create",
+   "update"
+  ],
+  "sort": "ref"
+ },
+ "documents": {
+  "label": "Document register",
+  "singular": "Document",
+  "section": "technical",
+  "title": "title",
+  "fields": [
+   {
+    "k": "doc_no",
+    "t": "text",
+    "label": "Document no.",
+    "req": true
+   },
+   {
+    "k": "title",
+    "t": "text",
+    "label": "Title",
+    "req": true
+   },
+   {
+    "k": "discipline",
+    "t": "text",
+    "label": "Discipline"
+   },
+   {
+    "k": "revision",
+    "t": "text",
+    "label": "Revision"
+   },
+   {
+    "k": "purpose",
+    "t": "select",
+    "label": "Purpose",
+    "options": [
+     "IFR – for review",
+     "IFA – for approval",
+     "IFC – for construction",
+     "As-built",
+     "For information"
+    ],
+    "default": "IFR – for review"
+   },
+   {
+    "k": "issued_date",
+    "t": "date",
+    "label": "Issued"
+   },
+   {
+    "k": "transmittal",
+    "t": "text",
+    "label": "Transmittal"
+   },
+   {
+    "k": "client_status",
+    "t": "select",
+    "label": "Client status",
+    "options": [
+     "Not issued",
+     "Awaiting response",
+     "Approved",
+     "Approved with comments",
+     "Rejected"
+    ],
+    "default": "Not issued"
+   },
+   {
+    "k": "notes",
+    "t": "longtext",
+    "label": "Notes"
+   }
+  ],
+  "list": [
+   "doc_no",
+   "title",
+   "revision",
+   "purpose",
+   "client_status"
+  ],
+  "closed": {},
+  "due": null,
+  "ai": [],
+  "sort": "doc_no"
+ },
+ "deviations": {
+  "label": "Technical deviations",
+  "singular": "Deviation",
+  "section": "technical",
+  "title": "title",
+  "fields": [
+   {
+    "k": "ref",
+    "t": "text",
+    "label": "Ref",
+    "req": true
+   },
+   {
+    "k": "title",
+    "t": "text",
+    "label": "Title",
+    "req": true
+   },
+   {
+    "k": "requirement_ref",
+    "t": "text",
+    "label": "Requirement"
+   },
+   {
+    "k": "description",
+    "t": "longtext",
+    "label": "Description"
+   },
+   {
+    "k": "reason",
+    "t": "longtext",
+    "label": "Reason"
+   },
+   {
+    "k": "status",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "Proposed",
+     "Submitted",
+     "Approved",
+     "Rejected",
+     "Withdrawn"
+    ],
+    "default": "Proposed"
+   },
+   {
+    "k": "client_approval_date",
+    "t": "date",
+    "label": "Client approval"
+   }
+  ],
+  "list": [
+   "ref",
+   "title",
+   "requirement_ref",
+   "status"
+  ],
+  "closed": {},
+  "due": null,
+  "ai": [],
+  "sort": "ref"
+ },
+ "clients": {
+  "label": "Clients",
+  "singular": "Client",
+  "section": "people",
+  "title": "name",
+  "fields": [
+   {
+    "k": "name",
+    "t": "text",
+    "label": "Name",
+    "req": true
+   },
+   {
+    "k": "contact_name",
+    "t": "text",
+    "label": "Contact"
+   },
+   {
+    "k": "email",
+    "t": "text",
+    "label": "Email"
+   },
+   {
+    "k": "phone",
+    "t": "text",
+    "label": "Phone"
+   },
+   {
+    "k": "vat_no",
+    "t": "text",
+    "label": "VAT no."
+   },
+   {
+    "k": "registration_no",
+    "t": "text",
+    "label": "Registration no."
+   },
+   {
+    "k": "payment_terms",
+    "t": "text",
+    "label": "Payment terms"
+   },
+   {
+    "k": "notes",
+    "t": "longtext",
+    "label": "Notes"
+   }
+  ],
+  "list": [
+   "name",
+   "contact_name",
+   "email",
+   "payment_terms"
+  ],
+  "closed": {},
+  "due": null,
+  "ai": [],
+  "sort": "name"
+ },
+ "suppliers": {
+  "label": "Suppliers",
+  "singular": "Supplier",
+  "section": "procurement",
+  "title": "name",
+  "fields": [
+   {
+    "k": "name",
+    "t": "text",
+    "label": "Name",
+    "req": true
+   },
+   {
+    "k": "contact_name",
+    "t": "text",
+    "label": "Contact"
+   },
+   {
+    "k": "email",
+    "t": "text",
+    "label": "Email"
+   },
+   {
+    "k": "phone",
+    "t": "text",
+    "label": "Phone"
+   },
+   {
+    "k": "vat_no",
+    "t": "text",
+    "label": "VAT no."
+   },
+   {
+    "k": "registration_no",
+    "t": "text",
+    "label": "Registration no."
+   },
+   {
+    "k": "categories",
+    "t": "text",
+    "label": "Supplies"
+   },
+   {
+    "k": "payment_terms",
+    "t": "text",
+    "label": "Payment terms"
+   },
+   {
+    "k": "notes",
+    "t": "longtext",
+    "label": "Notes"
+   }
+  ],
+  "list": [
+   "name",
+   "contact_name",
+   "categories",
+   "payment_terms"
+  ],
+  "closed": {},
+  "due": null,
+  "ai": [],
+  "sort": "name"
+ },
+ "supplier_quotes": {
+  "label": "Supplier quotes",
+  "singular": "Supplier quote",
+  "section": "commercial",
+  "title": "quote_ref",
+  "fields": [
+   {
+    "k": "supplier_id",
+    "t": "ref",
+    "label": "Supplier",
+    "ref": "suppliers",
+    "req": true
+   },
+   {
+    "k": "quote_ref",
+    "t": "text",
+    "label": "Quote ref.",
+    "req": true
+   },
+   {
+    "k": "option",
+    "t": "text",
+    "label": "Option / offer"
+   },
+   {
+    "k": "quote_date",
+    "t": "date",
+    "label": "Quote date"
+   },
+   {
+    "k": "validity_date",
+    "t": "date",
+    "label": "Valid until"
+   },
+   {
+    "k": "currency",
+    "t": "select",
+    "label": "Currency",
+    "options": [
+     "ZAR",
+     "BWP",
+     "USD",
+     "AUD",
+     "EUR"
+    ],
+    "default": "ZAR"
+   },
+   {
+    "k": "exchange_rate",
+    "t": "number",
+    "label": "Rate to ZAR",
+    "default": 1
+   },
+   {
+    "k": "fx_basis",
+    "t": "text",
+    "label": "Exchange-rate basis"
+   },
+   {
+    "k": "vat_rate",
+    "t": "pct",
+    "label": "VAT %",
+    "default": 15
+   },
+   {
+    "k": "lead_time",
+    "t": "text",
+    "label": "Lead time"
+   },
+   {
+    "k": "payment_terms",
+    "t": "text",
+    "label": "Payment terms"
+   },
+   {
+    "k": "delivery_terms",
+    "t": "text",
+    "label": "Delivery terms"
+   },
+   {
+    "k": "equipment_key",
+    "t": "text",
+    "label": "RF system (links to Site)"
+   },
+   {
+    "k": "scope",
+    "t": "longtext",
+    "label": "What it offers"
+   },
+   {
+    "k": "exclusions",
+    "t": "longtext",
+    "label": "Exclusions"
+   },
+   {
+    "k": "status",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "Received",
+     "Under review",
+     "Preferred",
+     "Rejected",
+     "Ordered",
+     "Expired"
+    ],
+    "default": "Received"
+   },
+   {
+    "k": "notes",
+    "t": "longtext",
+    "label": "Notes"
+   }
+  ],
+  "list": [
+   "supplier_id",
+   "quote_ref",
+   "option",
+   "validity_date",
+   "lead_time",
+   "status"
+  ],
+  "closed": {},
+  "due": "validity_date",
+  "ai": [
+   "update"
+  ],
+  "sort": null
+ },
+ "quote_lines": {
+  "label": "Quote lines",
+  "singular": "Quote line",
+  "section": "commercial",
+  "title": "description",
+  "fields": [
+   {
+    "k": "quote_id",
+    "t": "ref",
+    "label": "Quote",
+    "ref": "supplier_quotes",
+    "req": true
+   },
+   {
+    "k": "part_number",
+    "t": "text",
+    "label": "Code"
+   },
+   {
+    "k": "description",
+    "t": "text",
+    "label": "Description",
+    "req": true
+   },
+   {
+    "k": "quantity",
+    "t": "number",
+    "label": "Quantity",
+    "default": 1
+   },
+   {
+    "k": "unit_price",
+    "t": "money",
+    "label": "Unit price (quote currency)"
+   },
+   {
+    "k": "discount_pct",
+    "t": "pct",
+    "label": "Discount %"
+   },
+   {
+    "k": "cost_code",
+    "t": "text",
+    "label": "Cost code"
+   }
+  ],
+  "list": [
+   "quote_id",
+   "part_number",
+   "description",
+   "quantity",
+   "unit_price",
+   "discount_pct"
+  ],
+  "closed": {},
+  "due": null,
+  "ai": [],
+  "sort": null
+ },
+ "client_pos": {
+  "label": "Client purchase orders",
+  "singular": "Client PO",
+  "section": "commercial",
+  "title": "po_number",
+  "fields": [
+   {
+    "k": "po_number",
+    "t": "text",
+    "label": "PO number",
+    "req": true
+   },
+   {
+    "k": "client_id",
+    "t": "ref",
+    "label": "Client",
+    "ref": "clients"
+   },
+   {
+    "k": "po_date",
+    "t": "date",
+    "label": "PO date"
+   },
+   {
+    "k": "value_ex_vat",
+    "t": "money",
+    "label": "Value excl. VAT"
+   },
+   {
+    "k": "vat_rate",
+    "t": "pct",
+    "label": "VAT %",
+    "default": 15
+   },
+   {
+    "k": "currency",
+    "t": "select",
+    "label": "Currency",
+    "options": [
+     "ZAR",
+     "BWP",
+     "USD"
+    ],
+    "default": "ZAR"
+   },
+   {
+    "k": "retention_pct",
+    "t": "pct",
+    "label": "Retention %"
+   },
+   {
+    "k": "our_quote_ref",
+    "t": "text",
+    "label": "Our quote ref."
+   },
+   {
+    "k": "payment_terms",
+    "t": "text",
+    "label": "Payment terms"
+   },
+   {
+    "k": "scope",
+    "t": "longtext",
+    "label": "Scope"
+   },
+   {
+    "k": "status",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "Received",
+     "Accepted",
+     "Amended",
+     "Closed"
+    ],
+    "default": "Received"
+   }
+  ],
+  "list": [
+   "po_number",
+   "client_id",
+   "po_date",
+   "value_ex_vat",
+   "status"
+  ],
+  "closed": {},
+  "due": null,
+  "ai": [],
+  "sort": null
+ },
+ "po_milestones": {
+  "label": "Payment milestones",
+  "singular": "Payment milestone",
+  "section": "commercial",
+  "title": "title",
+  "fields": [
+   {
+    "k": "po_id",
+    "t": "ref",
+    "label": "Client PO",
+    "ref": "client_pos",
+    "req": true
+   },
+   {
+    "k": "title",
+    "t": "text",
+    "label": "Milestone",
+    "req": true
+   },
+   {
+    "k": "pct",
+    "t": "pct",
+    "label": "% of PO"
+   },
+   {
+    "k": "amount",
+    "t": "money",
+    "label": "Amount (overrides %)"
+   },
+   {
+    "k": "due_date",
+    "t": "date",
+    "label": "Expected"
+   },
+   {
+    "k": "invoiced_date",
+    "t": "date",
+    "label": "Invoiced"
+   },
+   {
+    "k": "paid_date",
+    "t": "date",
+    "label": "Paid"
+   },
+   {
+    "k": "status",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "Planned",
+     "Claimable",
+     "Invoiced",
+     "Paid"
+    ],
+    "default": "Planned"
+   }
+  ],
+  "list": [
+   "po_id",
+   "title",
+   "pct",
+   "amount",
+   "due_date",
+   "status"
+  ],
+  "closed": {
+   "status": [
+    "Paid"
+   ]
+  },
+  "due": "due_date",
+  "ai": [],
+  "sort": null
+ },
+ "cost_codes": {
+  "label": "Budget (cost codes)",
+  "singular": "Cost code",
+  "section": "commercial",
+  "title": "name",
+  "fields": [
+   {
+    "k": "code",
+    "t": "text",
+    "label": "Code",
+    "req": true
+   },
+   {
+    "k": "name",
+    "t": "text",
+    "label": "Name",
+    "req": true
+   },
+   {
+    "k": "budget",
+    "t": "money",
+    "label": "Original budget"
+   },
+   {
+    "k": "approved_changes",
+    "t": "money",
+    "label": "Approved changes"
+   },
+   {
+    "k": "etc",
+    "t": "money",
+    "label": "Estimate to complete"
+   },
+   {
+    "k": "notes",
+    "t": "longtext",
+    "label": "Notes"
+   }
+  ],
+  "list": [
+   "code",
+   "name",
+   "budget",
+   "approved_changes",
+   "etc"
+  ],
+  "closed": {},
+  "due": null,
+  "ai": [],
+  "sort": "code"
+ },
+ "supplier_pos": {
+  "label": "Supplier purchase orders",
+  "singular": "Supplier PO",
+  "section": "commercial",
+  "title": "po_number",
+  "fields": [
+   {
+    "k": "po_number",
+    "t": "text",
+    "label": "PO number",
+    "req": true
+   },
+   {
+    "k": "supplier_id",
+    "t": "ref",
+    "label": "Supplier",
+    "ref": "suppliers"
+   },
+   {
+    "k": "quote_id",
+    "t": "ref",
+    "label": "From quote",
+    "ref": "supplier_quotes"
+   },
+   {
+    "k": "po_date",
+    "t": "date",
+    "label": "PO date"
+   },
+   {
+    "k": "cost_code",
+    "t": "text",
+    "label": "Cost code"
+   },
+   {
+    "k": "value_ex_vat",
+    "t": "money",
+    "label": "Value excl. VAT (ZAR)"
+   },
+   {
+    "k": "expected_delivery",
+    "t": "date",
+    "label": "Expected delivery"
+   },
+   {
+    "k": "payment_due",
+    "t": "date",
+    "label": "Payment due"
+   },
+   {
+    "k": "status",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "Draft",
+     "Issued",
+     "Acknowledged",
+     "Delivered",
+     "Invoiced",
+     "Paid",
+     "Cancelled"
+    ],
+    "default": "Draft"
+   }
+  ],
+  "list": [
+   "po_number",
+   "supplier_id",
+   "cost_code",
+   "value_ex_vat",
+   "expected_delivery",
+   "status"
+  ],
+  "closed": {
+   "status": [
+    "Paid",
+    "Cancelled"
+   ]
+  },
+  "due": "expected_delivery",
+  "ai": [],
+  "sort": null
+ },
+ "invoices": {
+  "label": "Invoices",
+  "singular": "Invoice",
+  "section": "commercial",
+  "title": "number",
+  "fields": [
+   {
+    "k": "direction",
+    "t": "select",
+    "label": "Direction",
+    "options": [
+     "Supplier invoice",
+     "Client invoice"
+    ],
+    "default": "Supplier invoice"
+   },
+   {
+    "k": "number",
+    "t": "text",
+    "label": "Invoice no.",
+    "req": true
+   },
+   {
+    "k": "party",
+    "t": "text",
+    "label": "Supplier / client"
+   },
+   {
+    "k": "po_ref",
+    "t": "text",
+    "label": "PO ref."
+   },
+   {
+    "k": "cost_code",
+    "t": "text",
+    "label": "Cost code"
+   },
+   {
+    "k": "invoice_date",
+    "t": "date",
+    "label": "Invoice date"
+   },
+   {
+    "k": "due_date",
+    "t": "date",
+    "label": "Due date"
+   },
+   {
+    "k": "amount_ex_vat",
+    "t": "money",
+    "label": "Amount excl. VAT"
+   },
+   {
+    "k": "vat_rate",
+    "t": "pct",
+    "label": "VAT %",
+    "default": 15
+   },
+   {
+    "k": "status",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "Draft",
+     "Issued",
+     "Received",
+     "Approved",
+     "Paid"
+    ],
+    "default": "Draft"
+   }
+  ],
+  "list": [
+   "direction",
+   "number",
+   "party",
+   "amount_ex_vat",
+   "due_date",
+   "status"
+  ],
+  "closed": {
+   "status": [
+    "Paid"
+   ]
+  },
+  "due": "due_date",
+  "ai": [],
+  "sort": null
+ },
+ "variations": {
+  "label": "Change requests & variations",
+  "singular": "Change request",
+  "section": "commercial",
+  "title": "title",
+  "fields": [
+   {
+    "k": "ref",
+    "t": "text",
+    "label": "Ref",
+    "req": true
+   },
+   {
+    "k": "title",
+    "t": "text",
+    "label": "Title",
+    "req": true
+   },
+   {
+    "k": "origin",
+    "t": "text",
+    "label": "Origin"
+   },
+   {
+    "k": "change_type",
+    "t": "select",
+    "label": "Type",
+    "options": [
+     "Client change",
+     "Internal change",
+     "Variation order",
+     "Scope clarification"
+    ],
+    "default": "Client change"
+   },
+   {
+    "k": "requested_by",
+    "t": "text",
+    "label": "Requested by"
+   },
+   {
+    "k": "request_date",
+    "t": "date",
+    "label": "Requested"
+   },
+   {
+    "k": "impact_scope",
+    "t": "longtext",
+    "label": "Scope / quality impact"
+   },
+   {
+    "k": "decision_by",
+    "t": "text",
+    "label": "Decision by"
+   },
+   {
+    "k": "description",
+    "t": "longtext",
+    "label": "Description"
+   },
+   {
+    "k": "estimated_cost",
+    "t": "money",
+    "label": "Our cost"
+   },
+   {
+    "k": "sell_value",
+    "t": "money",
+    "label": "Sell value to client"
+   },
+   {
+    "k": "schedule_days",
+    "t": "number",
+    "label": "Schedule impact (days)"
+   },
+   {
+    "k": "status",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "Identified",
+     "Priced",
+     "Submitted",
+     "Approved",
+     "Rejected"
+    ],
+    "default": "Identified"
+   },
+   {
+    "k": "approved_date",
+    "t": "date",
+    "label": "Approved date"
+   }
+  ],
+  "list": [
+   "ref",
+   "title",
+   "estimated_cost",
+   "sell_value",
+   "status"
+  ],
+  "closed": {},
+  "due": null,
+  "ai": [
+   "create"
+  ],
+  "sort": "ref"
+ },
+ "_meta": {
+  "workstreams": [
+   "Project management",
+   "Engineering & design",
+   "Procurement",
+   "Panel manufacture",
+   "FAT",
+   "Logistics",
+   "Site works",
+   "Installation",
+   "Commissioning",
+   "SAT",
+   "Handover & close-out",
+   "Commercial"
+  ]
+ },
+ "meeting_items": {
+  "label": "Meeting minutes items",
+  "singular": "Minutes item",
+  "section": "project",
+  "title": "topic",
+  "fields": [
+   {
+    "k": "meeting_id",
+    "t": "ref",
+    "label": "Meeting",
+    "ref": "meetings",
+    "req": true
+   },
+   {
+    "k": "seq",
+    "t": "number",
+    "label": "Item no."
+   },
+   {
+    "k": "item_type",
+    "t": "select",
+    "label": "Type",
+    "options": [
+     "Discussion",
+     "Decision",
+     "Action",
+     "Information",
+     "Risk"
+    ],
+    "default": "Discussion"
+   },
+   {
+    "k": "topic",
+    "t": "text",
+    "label": "Topic",
+    "req": true
+   },
+   {
+    "k": "details",
+    "t": "longtext",
+    "label": "Discussion / detail"
+   },
+   {
+    "k": "owner",
+    "t": "text",
+    "label": "Owner"
+   },
+   {
+    "k": "due_date",
+    "t": "date",
+    "label": "Due"
+   },
+   {
+    "k": "status",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "Open",
+     "Done",
+     "Carried forward",
+     "Noted"
+    ],
+    "default": "Open"
+   },
+   {
+    "k": "action_id",
+    "t": "ref",
+    "label": "Linked action",
+    "ref": "actions"
+   }
+  ],
+  "list": [
+   "seq",
+   "item_type",
+   "topic",
+   "owner",
+   "due_date",
+   "status"
+  ],
+  "closed": {
+   "status": [
+    "Done",
+    "Noted"
+   ]
+  },
+  "due": "due_date",
+  "ai": [
+   "create"
+  ],
+  "sort": "seq"
+ },
+ "stakeholders": {
+  "label": "Stakeholders & contacts",
+  "singular": "Stakeholder",
+  "section": "people",
+  "title": "name",
+  "fields": [
+   {
+    "k": "name",
+    "t": "text",
+    "label": "Name",
+    "req": true
+   },
+   {
+    "k": "organisation",
+    "t": "text",
+    "label": "Organisation"
+   },
+   {
+    "k": "party",
+    "t": "select",
+    "label": "Party",
+    "options": [
+     "Client",
+     "Client engineer",
+     "Contractor",
+     "Sub-contractor",
+     "Supplier",
+     "Consultant",
+     "Internal (CGI)",
+     "Authority",
+     "End user"
+    ],
+    "default": "Client"
+   },
+   {
+    "k": "role",
+    "t": "text",
+    "label": "Role / title"
+   },
+   {
+    "k": "team",
+    "t": "select",
+    "label": "Team",
+    "options": [
+     "Project management",
+     "Engineering",
+     "Workshop",
+     "Site / installation",
+     "Commissioning",
+     "Client",
+     "Contractor",
+     "Supplier"
+    ]
+   },
+   {
+    "k": "clearance",
+    "t": "select",
+    "label": "Site clearance",
+    "options": [
+     "Cleared to work",
+     "Supervise only",
+     "Papers pending",
+     "Not needed"
+    ],
+    "default": "Not needed"
+   },
+   {
+    "k": "availability",
+    "t": "json",
+    "label": "Availability"
+   },
+   {
+    "k": "papers",
+    "t": "json",
+    "label": "Papers"
+   },
+   {
+    "k": "email",
+    "t": "text",
+    "label": "Email"
+   },
+   {
+    "k": "phone",
+    "t": "text",
+    "label": "Phone"
+   },
+   {
+    "k": "influence",
+    "t": "select",
+    "label": "Influence",
+    "options": [
+     "High",
+     "Medium",
+     "Low"
+    ],
+    "default": "Medium"
+   },
+   {
+    "k": "interest",
+    "t": "select",
+    "label": "Interest",
+    "options": [
+     "High",
+     "Medium",
+     "Low"
+    ],
+    "default": "Medium"
+   },
+   {
+    "k": "engagement",
+    "t": "select",
+    "label": "Engagement",
+    "options": [
+     "Unaware",
+     "Resistant",
+     "Neutral",
+     "Supportive",
+     "Leading"
+    ],
+    "default": "Neutral"
+   },
+   {
+    "k": "communication",
+    "t": "text",
+    "label": "Communication (how / how often)"
+   },
+   {
+    "k": "notes",
+    "t": "longtext",
+    "label": "Notes"
+   }
+  ],
+  "list": [
+   "name",
+   "organisation",
+   "party",
+   "role",
+   "email",
+   "phone"
+  ],
+  "closed": {},
+  "due": null,
+  "ai": [],
+  "sort": "name"
+ },
+ "raci": {
+  "label": "RACI matrix",
+  "singular": "RACI activity",
+  "section": "people",
+  "title": "activity",
+  "fields": [
+   {
+    "k": "activity",
+    "t": "text",
+    "label": "Activity / deliverable",
+    "req": true
+   },
+   {
+    "k": "workstream",
+    "t": "select",
+    "label": "Workstream",
+    "options": [
+     "Project management",
+     "Engineering & design",
+     "Procurement",
+     "Panel manufacture",
+     "FAT",
+     "Logistics",
+     "Site works",
+     "Installation",
+     "Commissioning",
+     "SAT",
+     "Handover & close-out",
+     "Commercial"
+    ]
+   },
+   {
+    "k": "task_id",
+    "t": "ref",
+    "label": "Related task",
+    "ref": "tasks"
+   },
+   {
+    "k": "seq",
+    "t": "number",
+    "label": "Order"
+   },
+   {
+    "k": "assignments",
+    "t": "json",
+    "label": "Assignments"
+   },
+   {
+    "k": "notes",
+    "t": "longtext",
+    "label": "Notes"
+   }
+  ],
+  "list": [
+   "activity",
+   "workstream"
+  ],
+  "closed": {},
+  "due": null,
+  "ai": [],
+  "sort": "seq"
+ },
+ "procurement": {
+  "label": "Procurement tracker",
+  "singular": "Procurement item",
+  "section": "procurement",
+  "title": "item",
+  "fields": [
+   {
+    "k": "item",
+    "t": "text",
+    "label": "Item",
+    "req": true
+   },
+   {
+    "k": "description",
+    "t": "longtext",
+    "label": "Specification / description"
+   },
+   {
+    "k": "category",
+    "t": "select",
+    "label": "Category",
+    "options": [
+     "Radios & comms",
+     "Antennas & masts",
+     "Panels & enclosures",
+     "Power & UPS",
+     "PLC & SCADA",
+     "Instrumentation",
+     "Cables & accessories",
+     "Services",
+     "Other"
+    ],
+    "default": "Other"
+   },
+   {
+    "k": "supplier_id",
+    "t": "ref",
+    "label": "Supplier",
+    "ref": "suppliers"
+   },
+   {
+    "k": "quantity",
+    "t": "number",
+    "label": "Qty"
+   },
+   {
+    "k": "unit",
+    "t": "text",
+    "label": "Unit"
+   },
+   {
+    "k": "required_by",
+    "t": "date",
+    "label": "Required on site by"
+   },
+   {
+    "k": "quote_ref",
+    "t": "text",
+    "label": "Supplier quote"
+   },
+   {
+    "k": "po_ref",
+    "t": "text",
+    "label": "Our PO number"
+   },
+   {
+    "k": "order_date",
+    "t": "date",
+    "label": "Ordered"
+   },
+   {
+    "k": "lead_time_weeks",
+    "t": "number",
+    "label": "Lead time (weeks)"
+   },
+   {
+    "k": "expected_delivery",
+    "t": "date",
+    "label": "Expected delivery"
+   },
+   {
+    "k": "actual_delivery",
+    "t": "date",
+    "label": "Delivered"
+   },
+   {
+    "k": "location",
+    "t": "text",
+    "label": "Current location"
+   },
+   {
+    "k": "inspection",
+    "t": "select",
+    "label": "Inspection",
+    "options": [
+     "Not inspected",
+     "Passed",
+     "Partial",
+     "Failed"
+    ],
+    "default": "Not inspected"
+   },
+   {
+    "k": "status",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "Not started",
+     "Specifying",
+     "RFQ sent",
+     "Quoted",
+     "Ordered",
+     "Expediting",
+     "In transit",
+     "Delivered",
+     "Inspected",
+     "Issued to site",
+     "Installed",
+     "Cancelled"
+    ],
+    "default": "Not started"
+   },
+   {
+    "k": "cost",
+    "t": "money",
+    "label": "Cost (excl. VAT)"
+   },
+   {
+    "k": "cost_code",
+    "t": "text",
+    "label": "Cost code"
+   },
+   {
+    "k": "notes",
+    "t": "longtext",
+    "label": "Notes"
+   }
+  ],
+  "list": [
+   "item",
+   "category",
+   "supplier_id",
+   "required_by",
+   "expected_delivery",
+   "status"
+  ],
+  "closed": {
+   "status": [
+    "Installed",
+    "Issued to site",
+    "Inspected",
+    "Cancelled"
+   ]
+  },
+  "due": "expected_delivery",
+  "ai": [
+   "create",
+   "update"
+  ],
+  "sort": null
+ },
+ "tests": {
+  "label": "FAT / SAT tests",
+  "singular": "Test",
+  "section": "quality",
+  "title": "title",
+  "fields": [
+   {
+    "k": "ref",
+    "t": "text",
+    "label": "Ref"
+   },
+   {
+    "k": "test_type",
+    "t": "select",
+    "label": "Test",
+    "options": [
+     "FAT",
+     "SAT",
+     "SIT",
+     "Pre-commissioning",
+     "Commissioning",
+     "Performance test"
+    ],
+    "default": "FAT"
+   },
+   {
+    "k": "title",
+    "t": "text",
+    "label": "Title",
+    "req": true
+   },
+   {
+    "k": "procedure",
+    "t": "text",
+    "label": "Procedure / ITP document"
+   },
+   {
+    "k": "location",
+    "t": "text",
+    "label": "Location"
+   },
+   {
+    "k": "planned_date",
+    "t": "date",
+    "label": "Planned"
+   },
+   {
+    "k": "witness",
+    "t": "text",
+    "label": "Witnesses (client / engineer)"
+   },
+   {
+    "k": "criteria",
+    "t": "longtext",
+    "label": "Acceptance criteria"
+   },
+   {
+    "k": "result",
+    "t": "select",
+    "label": "Result",
+    "options": [
+     "Not run",
+     "Pass",
+     "Pass with comments",
+     "Fail",
+     "Retest required"
+    ],
+    "default": "Not run"
+   },
+   {
+    "k": "executed_date",
+    "t": "date",
+    "label": "Executed"
+   },
+   {
+    "k": "signed_off_by",
+    "t": "text",
+    "label": "Signed off by"
+   },
+   {
+    "k": "signoff_date",
+    "t": "date",
+    "label": "Sign-off date"
+   },
+   {
+    "k": "evidence",
+    "t": "text",
+    "label": "Evidence / report ref"
+   },
+   {
+    "k": "task_id",
+    "t": "ref",
+    "label": "Schedule task",
+    "ref": "tasks"
+   },
+   {
+    "k": "notes",
+    "t": "longtext",
+    "label": "Notes"
+   }
+  ],
+  "list": [
+   "ref",
+   "test_type",
+   "title",
+   "planned_date",
+   "result",
+   "signoff_date"
+  ],
+  "closed": {
+   "result": [
+    "Pass",
+    "Pass with comments"
+   ]
+  },
+  "due": "planned_date",
+  "ai": [
+   "create",
+   "update"
+  ],
+  "sort": "ref"
+ },
+ "punch_items": {
+  "label": "Punch list",
+  "singular": "Punch item",
+  "section": "quality",
+  "title": "description",
+  "fields": [
+   {
+    "k": "ref",
+    "t": "text",
+    "label": "Ref"
+   },
+   {
+    "k": "test_id",
+    "t": "ref",
+    "label": "Test",
+    "ref": "tests"
+   },
+   {
+    "k": "description",
+    "t": "text",
+    "label": "Description",
+    "req": true
+   },
+   {
+    "k": "category",
+    "t": "select",
+    "label": "Category",
+    "options": [
+     "A – before acceptance",
+     "B – before handover",
+     "C – minor"
+    ],
+    "default": "B – before handover"
+   },
+   {
+    "k": "location",
+    "t": "text",
+    "label": "Location"
+   },
+   {
+    "k": "owner",
+    "t": "text",
+    "label": "Owner"
+   },
+   {
+    "k": "due_date",
+    "t": "date",
+    "label": "Due"
+   },
+   {
+    "k": "status",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "Open",
+     "In progress",
+     "Ready to verify",
+     "Closed"
+    ],
+    "default": "Open"
+   },
+   {
+    "k": "closed_date",
+    "t": "date",
+    "label": "Closed"
+   },
+   {
+    "k": "notes",
+    "t": "longtext",
+    "label": "Notes"
+   }
+  ],
+  "list": [
+   "ref",
+   "description",
+   "category",
+   "owner",
+   "due_date",
+   "status"
+  ],
+  "closed": {
+   "status": [
+    "Closed"
+   ]
+  },
+  "due": "due_date",
+  "ai": [
+   "create",
+   "update"
+  ],
+  "sort": "ref"
+ },
+ "lessons": {
+  "label": "Lessons learned",
+  "singular": "Lesson",
+  "section": "project",
+  "title": "title",
+  "fields": [
+   {
+    "k": "title",
+    "t": "text",
+    "label": "Lesson",
+    "req": true
+   },
+   {
+    "k": "phase",
+    "t": "select",
+    "label": "Phase",
+    "options": [
+     "Project management",
+     "Engineering & design",
+     "Procurement",
+     "Panel manufacture",
+     "FAT",
+     "Logistics",
+     "Site works",
+     "Installation",
+     "Commissioning",
+     "SAT",
+     "Handover & close-out",
+     "Commercial"
+    ]
+   },
+   {
+    "k": "kind",
+    "t": "select",
+    "label": "Kind",
+    "options": [
+     "Went well",
+     "Improve",
+     "Risk to watch"
+    ],
+    "default": "Improve"
+   },
+   {
+    "k": "what_happened",
+    "t": "longtext",
+    "label": "What happened"
+   },
+   {
+    "k": "recommendation",
+    "t": "longtext",
+    "label": "Recommendation"
+   },
+   {
+    "k": "owner",
+    "t": "text",
+    "label": "Raised by"
+   },
+   {
+    "k": "lesson_date",
+    "t": "date",
+    "label": "Date"
+   }
+  ],
+  "list": [
+   "lesson_date",
+   "title",
+   "phase",
+   "kind"
+  ],
+  "closed": {},
+  "due": null,
+  "ai": [],
+  "sort": "-lesson_date"
+ },
+ "reminders": {
+  "label": "Reminders",
+  "singular": "Reminder",
+  "section": "project",
+  "title": "title",
+  "fields": [
+   {
+    "k": "title",
+    "t": "text",
+    "label": "Reminder",
+    "req": true
+   },
+   {
+    "k": "remind_date",
+    "t": "date",
+    "label": "Date",
+    "req": true
+   },
+   {
+    "k": "remind_time",
+    "t": "text",
+    "label": "Time (HH:MM)"
+   },
+   {
+    "k": "notes",
+    "t": "longtext",
+    "label": "Notes"
+   },
+   {
+    "k": "done",
+    "t": "bool",
+    "label": "Done"
+   }
+  ],
+  "list": [
+   "remind_date",
+   "remind_time",
+   "title",
+   "done"
+  ],
+  "closed": {
+   "done": [
+    1
+   ]
+  },
+  "due": "remind_date",
+  "ai": [
+   "create"
+  ],
+  "sort": "remind_date"
+ },
+ "status_updates": {
+  "label": "Status updates",
+  "singular": "Status update",
+  "section": "project",
+  "title": "week",
+  "fields": [
+   {
+    "k": "week",
+    "t": "text",
+    "label": "Week",
+    "req": true
+   },
+   {
+    "k": "rag",
+    "t": "select",
+    "label": "Status",
+    "options": [
+     "On track",
+     "At risk",
+     "Off track"
+    ],
+    "default": "On track"
+   },
+   {
+    "k": "done",
+    "t": "longtext",
+    "label": "What happened"
+   },
+   {
+    "k": "next",
+    "t": "longtext",
+    "label": "What is next"
+   },
+   {
+    "k": "help",
+    "t": "longtext",
+    "label": "Help needed"
+   },
+   {
+    "k": "by",
+    "t": "text",
+    "label": "Posted by"
+   },
+   {
+    "k": "posted",
+    "t": "date",
+    "label": "Posted"
+   }
+  ],
+  "list": [
+   "week",
+   "rag",
+   "posted",
+   "by"
+  ],
+  "closed": {},
+  "due": null,
+  "ai": [],
+  "sort": "-week"
+ }
+}

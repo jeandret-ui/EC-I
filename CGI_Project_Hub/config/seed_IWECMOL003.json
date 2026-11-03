@@ -1,0 +1,1468 @@
+{
+ "project": {
+  "code": "IWECMOL003",
+  "name": "Molepolole WWTW Telemetry",
+  "client_name": "WEC Projects",
+  "site": "Molepolole WWTW · Kalahari",
+  "status": "Active",
+  "phase": "Procurement",
+  "description": "Industrial broadband Ethernet radio network connecting the Engineering Office to the WWTW control room via the SR3 high site (Kalahari schedule).",
+  "start_date": "2026-10-26",
+  "target_finish": "2026-12-18",
+  "quote_ref": "T_IWECMOL005",
+  "po_number": "PO023758",
+  "register_code": "IWECMOL003",
+  "currency": "ZAR",
+  "colour": "#005093",
+  "modules": {
+   "rf_lab": true
+  },
+  "charter": {
+   "objectives": "Deliver a working telemetry radio network for Molepolole WWTW (SR3 high site, WWTP, Engineering Office) with SCADA integration, by the Kalahari lock-down date.",
+   "scope": "Molepolole WWTW Telemetry: engineering, supply, panel manufacture, installation and commissioning (per quote T_IWECMOL005).",
+   "budget": 641032,
+   "sponsor": "WEC Projects",
+   "client_contact": "Ruan Kellerman",
+   "assumptions": "Antennas and radios are in stores in South Africa. Panel is already sized.",
+   "constraints": "Kalahari lock down on 2026-12-18. Confirm 220 V supply and IP addresses before configuration.",
+   "success_criteria": "SAT passed (throughput per RF requirement), SCADA integrated, handover signed."
+  }
+ },
+ "tables": {
+  "tasks": {
+   "next_id": 19,
+   "records": [
+    {
+     "id": 1,
+     "source": "seed",
+     "wbs": "1",
+     "title": "Project management",
+     "workstream": "Project management",
+     "duration_days": 0,
+     "progress": 0,
+     "status": "Not started",
+     "notes": "From IWECMOL003 Schedule.xlsx.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 2,
+     "source": "seed",
+     "wbs": "1.1",
+     "title": "PO submitted",
+     "workstream": "Project management",
+     "duration_days": 0,
+     "is_milestone": 1,
+     "forecast_start": "2026-10-26",
+     "forecast_finish": "2026-10-26",
+     "baseline_start": "2026-10-26",
+     "baseline_finish": "2026-10-26",
+     "notes": "Schedule week 1 (IWECMOL003 Schedule.xlsx). Register: client PO PO023758 dated 2026-09-16.",
+     "progress": 0,
+     "status": "Not started",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 3,
+     "source": "seed",
+     "wbs": "1.2",
+     "title": "Project kick-off",
+     "workstream": "Project management",
+     "duration_days": 0,
+     "is_milestone": 1,
+     "predecessors": "1.1",
+     "forecast_start": "2026-10-28",
+     "forecast_finish": "2026-10-28",
+     "baseline_start": "2026-10-28",
+     "baseline_finish": "2026-10-28",
+     "progress": 0,
+     "status": "Not started",
+     "notes": "From IWECMOL003 Schedule.xlsx.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 4,
+     "source": "seed",
+     "wbs": "2",
+     "title": "Procurement",
+     "workstream": "Procurement",
+     "duration_days": 0,
+     "progress": 0,
+     "status": "Not started",
+     "notes": "From IWECMOL003 Schedule.xlsx.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 5,
+     "source": "seed",
+     "wbs": "2.1",
+     "title": "Antennas + radios",
+     "workstream": "Procurement",
+     "predecessors": "1.2",
+     "notes": "Schedule note: \"In stores in South Africa\". Status box not ticked. (IWECMOL003 Schedule.xlsx)",
+     "progress": 0,
+     "status": "Not started",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 6,
+     "source": "seed",
+     "wbs": "2.2",
+     "title": "UPS",
+     "workstream": "Procurement",
+     "predecessors": "1.2",
+     "notes": "No date in the schedule yet. (IWECMOL003 Schedule.xlsx)",
+     "progress": 0,
+     "status": "Not started",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 7,
+     "source": "seed",
+     "wbs": "3",
+     "title": "Panel",
+     "workstream": "Panel manufacture",
+     "duration_days": 0,
+     "progress": 0,
+     "status": "Not started",
+     "notes": "From IWECMOL003 Schedule.xlsx.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 8,
+     "source": "seed",
+     "wbs": "3.1",
+     "title": "Panel sizing",
+     "workstream": "Engineering & design",
+     "duration_days": 1,
+     "predecessors": "1.2",
+     "forecast_start": "2026-10-28",
+     "forecast_finish": "2026-10-28",
+     "baseline_start": "2026-10-28",
+     "baseline_finish": "2026-10-28",
+     "actual_finish": "2026-10-28",
+     "progress": 100,
+     "status": "Complete",
+     "notes": "Schedule: \"Already sized\". (IWECMOL003 Schedule.xlsx)",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 9,
+     "source": "seed",
+     "wbs": "3.2",
+     "title": "Assemble and configure",
+     "workstream": "Panel manufacture",
+     "predecessors": "3.1, 2.1, 2.2",
+     "notes": "Row in the schedule without dates yet. (IWECMOL003 Schedule.xlsx)",
+     "progress": 0,
+     "status": "Not started",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 10,
+     "source": "seed",
+     "wbs": "3.3",
+     "title": "Panel in Botswana",
+     "workstream": "Logistics",
+     "duration_days": 0,
+     "is_milestone": 1,
+     "predecessors": "3.2",
+     "forecast_start": "2026-11-20",
+     "forecast_finish": "2026-11-20",
+     "baseline_start": "2026-11-20",
+     "baseline_finish": "2026-11-20",
+     "progress": 0,
+     "status": "Not started",
+     "notes": "From IWECMOL003 Schedule.xlsx.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 11,
+     "source": "seed",
+     "wbs": "3.4",
+     "title": "Panel testing",
+     "workstream": "FAT",
+     "duration_days": 1,
+     "predecessors": "3.3",
+     "forecast_start": "2026-11-27",
+     "forecast_finish": "2026-11-27",
+     "baseline_start": "2026-11-27",
+     "baseline_finish": "2026-11-27",
+     "progress": 0,
+     "status": "Not started",
+     "notes": "From IWECMOL003 Schedule.xlsx.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 12,
+     "source": "seed",
+     "wbs": "4",
+     "title": "Install",
+     "workstream": "Installation",
+     "duration_days": 0,
+     "progress": 0,
+     "status": "Not started",
+     "notes": "From IWECMOL003 Schedule.xlsx.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 13,
+     "source": "seed",
+     "wbs": "4.1",
+     "title": "Travel to site",
+     "workstream": "Installation",
+     "duration_days": 1,
+     "predecessors": "3.4",
+     "forecast_start": "2026-11-30",
+     "forecast_finish": "2026-11-30",
+     "baseline_start": "2026-11-30",
+     "baseline_finish": "2026-11-30",
+     "progress": 0,
+     "status": "Not started",
+     "notes": "From IWECMOL003 Schedule.xlsx.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 14,
+     "source": "seed",
+     "wbs": "4.2",
+     "title": "Install",
+     "workstream": "Installation",
+     "duration_days": 2,
+     "predecessors": "4.1",
+     "forecast_start": "2026-12-01",
+     "forecast_finish": "2026-12-02",
+     "baseline_start": "2026-12-01",
+     "baseline_finish": "2026-12-02",
+     "progress": 0,
+     "status": "Not started",
+     "notes": "From IWECMOL003 Schedule.xlsx.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 15,
+     "source": "seed",
+     "wbs": "4.3",
+     "title": "Handover",
+     "workstream": "Handover & close-out",
+     "duration_days": 2,
+     "predecessors": "4.2",
+     "forecast_start": "2026-12-03",
+     "forecast_finish": "2026-12-04",
+     "baseline_start": "2026-12-03",
+     "baseline_finish": "2026-12-04",
+     "progress": 0,
+     "status": "Not started",
+     "notes": "From IWECMOL003 Schedule.xlsx.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 16,
+     "source": "seed",
+     "wbs": "5",
+     "title": "Commission",
+     "workstream": "Commissioning",
+     "duration_days": 0,
+     "progress": 0,
+     "status": "Not started",
+     "notes": "From IWECMOL003 Schedule.xlsx.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 17,
+     "source": "seed",
+     "wbs": "5.1",
+     "title": "SCADA commissioning",
+     "workstream": "Commissioning",
+     "duration_days": 5,
+     "predecessors": "4.3",
+     "forecast_start": "2026-12-07",
+     "forecast_finish": "2026-12-11",
+     "baseline_start": "2026-12-07",
+     "baseline_finish": "2026-12-11",
+     "progress": 0,
+     "status": "Not started",
+     "notes": "From IWECMOL003 Schedule.xlsx.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 18,
+     "source": "seed",
+     "wbs": "5.2",
+     "title": "Kalahari lock down",
+     "workstream": "Handover & close-out",
+     "duration_days": 0,
+     "is_milestone": 1,
+     "predecessors": "5.1",
+     "forecast_start": "2026-12-18",
+     "forecast_finish": "2026-12-18",
+     "baseline_start": "2026-12-18",
+     "baseline_finish": "2026-12-18",
+     "notes": "Site lock-down date from the schedule. (IWECMOL003 Schedule.xlsx)",
+     "progress": 0,
+     "status": "Not started",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    }
+   ]
+  },
+  "actions": {
+   "next_id": 13,
+   "records": [
+    {
+     "id": 1,
+     "source": "Schedule notes",
+     "title": "We need ip addesses. All three. We can make up one, but wee need to ensure it doesn’t conflict",
+     "category": "Follow-up",
+     "priority": "High",
+     "status": "Open",
+     "workstream": "Engineering & design",
+     "notes": "From the notes sheet in IWECMOL003 Schedule.xlsx.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 2,
+     "source": "Schedule notes",
+     "title": "Confirm 220V",
+     "category": "Follow-up",
+     "priority": "Normal",
+     "status": "Open",
+     "workstream": "Engineering & design",
+     "notes": "From the notes sheet in IWECMOL003 Schedule.xlsx.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 3,
+     "source": "Schedule notes",
+     "title": "Will ask payment after panel",
+     "category": "Follow-up",
+     "priority": "Normal",
+     "status": "Open",
+     "workstream": "Commercial",
+     "notes": "From the notes sheet in IWECMOL003 Schedule.xlsx.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 4,
+     "source": "Schedule notes",
+     "title": "How will VAT work, and from where will we pay?",
+     "category": "Follow-up",
+     "priority": "Normal",
+     "status": "Open",
+     "workstream": "Commercial",
+     "notes": "From the notes sheet in IWECMOL003 Schedule.xlsx.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 5,
+     "source": "Schedule",
+     "title": "Revert back to confirm dates",
+     "category": "Follow-up",
+     "due_date": "2026-11-04",
+     "priority": "High",
+     "status": "Open",
+     "workstream": "Project management",
+     "notes": "Shown on the schedule timeline. (IWECMOL003 Schedule.xlsx)",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 6,
+     "source": "RF Lab",
+     "title": "Confirm the BOCRA EIRP limits and permitted bands (5470–5725 and 5725–5875 MHz) in writing.",
+     "category": "Action",
+     "status": "Open",
+     "priority": "High",
+     "workstream": "Engineering & design",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 7,
+     "source": "RF Lab",
+     "title": "Run a 5 GHz spectrum survey at SR3, WWTP and the Engineer's Office before choosing channels.",
+     "category": "Action",
+     "status": "Open",
+     "priority": "High",
+     "workstream": "Engineering & design",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 8,
+     "source": "RF Lab",
+     "title": "Confirm with WUC whether 200–300 Mbps means aggregate TCP/IP, one direction, or radio PHY rate.",
+     "category": "Action",
+     "status": "Open",
+     "priority": "High",
+     "workstream": "Engineering & design",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 9,
+     "source": "RF Lab",
+     "title": "Fix the channel plan: two 80 MHz channels do not fit in 5725–5875 MHz.",
+     "category": "Action",
+     "status": "Open",
+     "priority": "High",
+     "workstream": "Engineering & design",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 10,
+     "source": "RF Lab",
+     "title": "Confirm on site which pump-station and iSR1a masts already exist.",
+     "category": "Action",
+     "status": "Open",
+     "priority": "High",
+     "workstream": "Engineering & design",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 11,
+     "source": "RF Lab",
+     "title": "Design SR3 power autonomy, surge protection and earthing (single point of failure).",
+     "category": "Action",
+     "status": "Open",
+     "priority": "High",
+     "workstream": "Engineering & design",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 12,
+     "source": "RF Lab",
+     "title": "Write FAT/SAT procedures: iPerf both directions, RSSI against prediction, comms-loss alarms.",
+     "category": "Action",
+     "status": "Open",
+     "priority": "High",
+     "workstream": "Engineering & design",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    }
+   ]
+  },
+  "procurement": {
+   "next_id": 3,
+   "records": [
+    {
+     "id": 1,
+     "source": "seed",
+     "item": "Antennas + radios",
+     "category": "Radios & comms",
+     "location": "In stores in South Africa",
+     "status": "Ordered",
+     "required_by": "2026-11-20",
+     "notes": "Schedule note: \"In stores in South Africa\"; status box not ticked. Confirm status and move to Delivered / Issued to site. (IWECMOL003 Schedule.xlsx)",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00",
+     "supplier_id": 1,
+     "quote_ref": "QS8044"
+    },
+    {
+     "id": 2,
+     "source": "seed",
+     "item": "UPS",
+     "category": "Power & UPS",
+     "status": "Not started",
+     "required_by": "2026-11-20",
+     "notes": "Listed under Procurement in the schedule, no date yet. (IWECMOL003 Schedule.xlsx)",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    }
+   ]
+  },
+  "stakeholders": {
+   "next_id": 5,
+   "records": [
+    {
+     "id": 1,
+     "source": "seed",
+     "name": "Ruan Kellerman",
+     "organisation": "WEC Projects",
+     "party": "Client",
+     "role": "Client contact",
+     "email": "ruan.kellerman@wecprojects.com",
+     "influence": "High",
+     "interest": "High",
+     "engagement": "Supportive",
+     "notes": "Contact from the quote register.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 2,
+     "source": "seed",
+     "name": "WUC",
+     "organisation": "Water Utilities Corporation",
+     "party": "End user",
+     "role": "End user / approver of the RF design",
+     "influence": "High",
+     "interest": "Medium",
+     "notes": "Named in the RF requirements and RFI-001.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 3,
+     "source": "seed",
+     "name": "Anrich",
+     "organisation": "Instramac (CGI)",
+     "party": "Internal (CGI)",
+     "role": "Quote owner (register)",
+     "influence": "High",
+     "interest": "High",
+     "engagement": "Leading",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 4,
+     "source": "seed",
+     "name": "Tabateq (Pty) Ltd",
+     "organisation": "Tabateq (Pty) Ltd",
+     "party": "Supplier",
+     "role": "Radio equipment supplier",
+     "influence": "Medium",
+     "interest": "Medium",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    }
+   ]
+  },
+  "raci": {
+   "next_id": 13,
+   "records": [
+    {
+     "id": 1,
+     "source": "seed",
+     "activity": "Client PO & contract",
+     "workstream": "Commercial",
+     "seq": 1,
+     "assignments": {},
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 2,
+     "source": "seed",
+     "activity": "Schedule & reporting",
+     "workstream": "Project management",
+     "seq": 2,
+     "assignments": {},
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 3,
+     "source": "seed",
+     "activity": "RF design & link budgets",
+     "workstream": "Engineering & design",
+     "seq": 3,
+     "assignments": {},
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 4,
+     "source": "seed",
+     "activity": "Client approval of RF design",
+     "workstream": "Engineering & design",
+     "seq": 4,
+     "assignments": {},
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 5,
+     "source": "seed",
+     "activity": "Procure antennas, radios & UPS",
+     "workstream": "Procurement",
+     "seq": 5,
+     "assignments": {},
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 6,
+     "source": "seed",
+     "activity": "Panel assemble & configure",
+     "workstream": "Panel manufacture",
+     "seq": 6,
+     "assignments": {},
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 7,
+     "source": "seed",
+     "activity": "Panel testing",
+     "workstream": "FAT",
+     "seq": 7,
+     "assignments": {},
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 8,
+     "source": "seed",
+     "activity": "Delivery to Botswana",
+     "workstream": "Logistics",
+     "seq": 8,
+     "assignments": {},
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 9,
+     "source": "seed",
+     "activity": "Installation & alignment",
+     "workstream": "Installation",
+     "seq": 9,
+     "assignments": {},
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 10,
+     "source": "seed",
+     "activity": "SCADA commissioning",
+     "workstream": "Commissioning",
+     "seq": 10,
+     "assignments": {},
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 11,
+     "source": "seed",
+     "activity": "Handover & lock down",
+     "workstream": "Handover & close-out",
+     "seq": 11,
+     "assignments": {},
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 12,
+     "source": "seed",
+     "activity": "Invoicing & payment",
+     "workstream": "Commercial",
+     "seq": 12,
+     "assignments": {},
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    }
+   ]
+  },
+  "requirements": {
+   "next_id": 16,
+   "records": [
+    {
+     "id": 1,
+     "source": "WUC emails",
+     "ref": "BW",
+     "area": "Bandwidth",
+     "text": "200–300 Mbps transmission capability. The client rejected the ~128 kbps Miri solution as a bottleneck.",
+     "status": "Open",
+     "verification_method": "RF analysis",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 2,
+     "source": "WUC emails",
+     "ref": "UHF",
+     "area": "Technology",
+     "text": "No UHF telemetry radios. WUC discontinued that approach because of low bandwidth, polling, complexity and maintenance.",
+     "status": "Open",
+     "verification_method": "RF analysis",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 3,
+     "source": "WUC emails",
+     "ref": "ARCH",
+     "area": "Architecture",
+     "text": "Broadband, Ethernet-style communications rather than low-speed polling telemetry.",
+     "status": "Open",
+     "verification_method": "RF analysis",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 4,
+     "source": "WUC emails",
+     "ref": "SIMPLE",
+     "area": "Simplicity",
+     "text": "Simple to configure and maintain; avoid complicated systems.",
+     "status": "Open",
+     "verification_method": "RF analysis",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 5,
+     "source": "WUC emails",
+     "ref": "REL",
+     "area": "Reliability",
+     "text": "Robust, utility-grade installation with adequate RSSL and fade margin; no marginal paths.",
+     "status": "Open",
+     "verification_method": "RF analysis",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 6,
+     "source": "Contract 6 package, Sept 2026",
+     "ref": "SITES",
+     "area": "Sites in scope",
+     "text": "WWTW Control Room, SR3 and the Engineering Office.",
+     "status": "Open",
+     "verification_method": "RF analysis",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 7,
+     "source": "TTA §5.1",
+     "ref": "SR3",
+     "area": "SR3 role",
+     "text": "Central high site and repeater between the Engineering Office and WWTP.",
+     "status": "Open",
+     "verification_method": "RF analysis",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 8,
+     "source": "TTA §7.7, Fig. 11–13",
+     "ref": "DIRECT",
+     "area": "Direct Eng Office → WWTP",
+     "text": "Not allowed: inadequate margin even with a 50 m WWTP mast.",
+     "status": "Open",
+     "verification_method": "RF analysis",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 9,
+     "source": "TTA §4.1–4.2",
+     "ref": "FREQ",
+     "area": "Frequency",
+     "text": "5.4–5.9 GHz microwave/ISM equipment, nominally 5.8 GHz.",
+     "status": "Open",
+     "verification_method": "RF analysis",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 10,
+     "source": "TTA §5.1, Rev 3",
+     "ref": "OMNI",
+     "area": "SR3 antenna",
+     "text": "Omnidirectional at SR3; higher-gain directional antennas at the Engineering Office and WWTW, aimed at SR3.",
+     "status": "Open",
+     "verification_method": "RF analysis",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 11,
+     "source": "CGI scope",
+     "ref": "ROCKWELL",
+     "area": "Rockwell integration",
+     "text": "Integrate with the existing Rockwell PLC/SCADA environment (EtherNet/IP); CGI retains PLC/SCADA integration.",
+     "status": "Open",
+     "verification_method": "RF analysis",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 12,
+     "source": "Original enquiry",
+     "ref": "INSTALL",
+     "area": "Installation",
+     "text": "Supply plus installation, configuration, onsite testing and commissioning.",
+     "status": "Open",
+     "verification_method": "Document review",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 13,
+     "source": "TTA §4.3",
+     "ref": "OPMOD",
+     "area": "Throughput at the operating modulation",
+     "text": "Prove 300 Mbps at the modulation the link actually runs, not merely that a link closes at −80 dBm (TTA §4.3 basis).",
+     "status": "Open",
+     "verification_method": "RF analysis",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 14,
+     "source": "TTA §7.6",
+     "ref": "RECALC",
+     "area": "Recalculate with the real equipment",
+     "text": "Redo link budgets with the selected radio, legal EIRP, channel width, cable losses, interference and availability; review antenna gains and heights.",
+     "status": "Open",
+     "verification_method": "Document review",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 15,
+     "source": "TTA Table 2",
+     "ref": "HEIGHTS",
+     "area": "Antenna heights",
+     "text": "At or above the TTA minimum heights: SR3 22 m, WWTP 9 m, Engineering Office 5 m; final heights per the approved construction drawings.",
+     "status": "Open",
+     "verification_method": "RF analysis",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    }
+   ]
+  },
+  "deliverables": {
+   "next_id": 18,
+   "records": [
+    {
+     "id": 1,
+     "source": "seed",
+     "ref": "DEL-001",
+     "title": "Final RF network design",
+     "status": "Outstanding",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 2,
+     "source": "seed",
+     "ref": "DEL-002",
+     "title": "Updated link budgets",
+     "status": "Outstanding",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 3,
+     "source": "seed",
+     "ref": "DEL-003",
+     "title": "Antenna selection",
+     "status": "Outstanding",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 4,
+     "source": "seed",
+     "ref": "DEL-004",
+     "title": "Frequency and channel plan",
+     "status": "Outstanding",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 5,
+     "source": "seed",
+     "ref": "DEL-005",
+     "title": "Equipment datasheets",
+     "status": "Outstanding",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 6,
+     "source": "seed",
+     "ref": "DEL-006",
+     "title": "Mounting heights",
+     "status": "Outstanding",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 7,
+     "source": "seed",
+     "ref": "DEL-007",
+     "title": "IP and network configuration",
+     "status": "Outstanding",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 8,
+     "source": "seed",
+     "ref": "DEL-008",
+     "title": "Radio configuration",
+     "status": "Outstanding",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 9,
+     "source": "seed",
+     "ref": "DEL-009",
+     "title": "Configuration backups",
+     "status": "Outstanding",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 10,
+     "source": "seed",
+     "ref": "DEL-010",
+     "title": "Installation",
+     "status": "Outstanding",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 11,
+     "source": "seed",
+     "ref": "DEL-011",
+     "title": "Alignment",
+     "status": "Outstanding",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 12,
+     "source": "seed",
+     "ref": "DEL-012",
+     "title": "RSSI/SNR measurements",
+     "status": "Outstanding",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 13,
+     "source": "seed",
+     "ref": "DEL-013",
+     "title": "Throughput test (iPerf, both directions)",
+     "status": "Outstanding",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 14,
+     "source": "seed",
+     "ref": "DEL-014",
+     "title": "Link stability test",
+     "status": "Outstanding",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 15,
+     "source": "seed",
+     "ref": "DEL-015",
+     "title": "Commissioning report",
+     "status": "Outstanding",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 16,
+     "source": "seed",
+     "ref": "DEL-016",
+     "title": "As-built drawings",
+     "status": "Outstanding",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 17,
+     "source": "seed",
+     "ref": "DEL-017",
+     "title": "Operation and maintenance documentation",
+     "status": "Outstanding",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    }
+   ]
+  },
+  "rfis": {
+   "next_id": 3,
+   "records": [
+    {
+     "id": 1,
+     "source": "seed",
+     "ref": "RFI-001",
+     "title": "Definition of 200–300 Mbps",
+     "question": "Is 200–300 Mbps usable throughput per link, aggregate network capacity, or the radio's advertised nominal rate?",
+     "raised_to": "WUC",
+     "status": "Draft",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 2,
+     "source": "seed",
+     "ref": "RFI-002",
+     "title": "IP addresses for the three sites",
+     "question": "We need ip addesses. All three. We can make up one, but wee need to ensure it doesn’t conflict",
+     "raised_to": "WEC Projects",
+     "status": "Draft",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    }
+   ]
+  },
+  "deviations": {
+   "next_id": 2,
+   "records": [
+    {
+     "id": 1,
+     "source": "seed",
+     "ref": "DEV-001",
+     "title": "Two point-to-point links at SR3 instead of the specified omni",
+     "requirement_ref": "OMNI",
+     "description": "Replace the SR3 omnidirectional antenna with two directional point-to-point links.",
+     "reason": "The specified omni topology may not deliver 200–300 Mbps; to be proven by the RF contractor first.",
+     "status": "Proposed",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    }
+   ]
+  },
+  "cost_codes": {
+   "next_id": 10,
+   "records": [
+    {
+     "id": 1,
+     "source": "seed",
+     "code": "100",
+     "name": "Engineering and RF design",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 2,
+     "source": "seed",
+     "code": "200",
+     "name": "Radio equipment",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 3,
+     "source": "seed",
+     "code": "300",
+     "name": "Antennas, cabling and surge protection",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 4,
+     "source": "seed",
+     "code": "400",
+     "name": "Panels and enclosures",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 5,
+     "source": "seed",
+     "code": "500",
+     "name": "Towers and masts",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 6,
+     "source": "seed",
+     "code": "600",
+     "name": "Installation and alignment",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 7,
+     "source": "seed",
+     "code": "700",
+     "name": "Testing and commissioning",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 8,
+     "source": "seed",
+     "code": "800",
+     "name": "Documentation and handover",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 9,
+     "source": "seed",
+     "code": "900",
+     "name": "Contingency",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    }
+   ]
+  },
+  "suppliers": {
+   "next_id": 2,
+   "records": [
+    {
+     "id": 1,
+     "source": "seed",
+     "name": "Tabateq (Pty) Ltd",
+     "contact_name": "Willem Krige",
+     "email": "willemk@tabateq.com",
+     "phone": "+27 861 008 008",
+     "vat_no": "4740239522",
+     "registration_no": "2021/578589/07",
+     "categories": "Industrial wireless (ELPRO)",
+     "payment_terms": "Payment prior to despatch",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    }
+   ]
+  },
+  "supplier_quotes": {
+   "next_id": 3,
+   "records": [
+    {
+     "id": 1,
+     "source": "seed",
+     "quote_ref": "QS8044",
+     "option": "A: ELPRO 245U-E-A 5 GHz Wi-Fi link kit (per end)",
+     "quote_date": "2026-10-01",
+     "validity_date": "2026-10-15",
+     "currency": "ZAR",
+     "exchange_rate": 1,
+     "fx_basis": "Prices tied to AUD 1 = R11.90; variation for buyer’s account",
+     "vat_rate": 15,
+     "lead_time": "4–6 weeks",
+     "payment_terms": "Payment prior to despatch",
+     "delivery_terms": "Delivered to Instramac, Kempton Park",
+     "equipment_key": "elpro245",
+     "scope": "One radio end: ELPRO 245U-E-A modem, 30 dBi dish, 10 m LMR400, surge arrestor, pigtail.",
+     "exclusions": "Masts, panels, power, installation. Licensing (quote refers to ICASA; site is in Botswana – BOCRA).",
+     "status": "Received",
+     "supplier_id": 1,
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 2,
+     "source": "seed",
+     "quote_ref": "QS8044",
+     "option": "B: ELPRO 415U-2-C4 UHF I/O gateway kit (per end)",
+     "quote_date": "2026-10-01",
+     "validity_date": "2026-10-15",
+     "currency": "ZAR",
+     "exchange_rate": 1,
+     "fx_basis": "Prices tied to AUD 1 = R11.90; variation for buyer’s account",
+     "vat_rate": 15,
+     "lead_time": "4–6 weeks",
+     "payment_terms": "Payment prior to despatch",
+     "delivery_terms": "Delivered to Instramac, Kempton Park",
+     "equipment_key": "elpro415",
+     "scope": "One radio end: ELPRO 415U-2-C4 UHF gateway, 2 dBi dipole, 10 m RG213, surge arrestor, bracket.",
+     "exclusions": "UHF is excluded by WUC requirement (no UHF telemetry). Frequency licence needed.",
+     "status": "Rejected",
+     "supplier_id": 1,
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    }
+   ]
+  },
+  "quote_lines": {
+   "next_id": 12,
+   "records": [
+    {
+     "id": 1,
+     "source": "seed",
+     "quote_id": 1,
+     "part_number": "UCE-245U-E-A",
+     "description": "ELPRO 245U-E-A Ethernet modem, 5 GHz, 400 mW",
+     "quantity": 1,
+     "unit_price": 18356.0,
+     "discount_pct": 10,
+     "cost_code": "200",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 2,
+     "source": "seed",
+     "quote_id": 1,
+     "part_number": "UCE-AC-CC-01C",
+     "description": "1 m LMR195 SMA(M)–N(M)",
+     "quantity": 1,
+     "unit_price": 780.0,
+     "discount_pct": 10,
+     "cost_code": "300",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 3,
+     "source": "seed",
+     "quote_id": 1,
+     "part_number": "UCE-LP-RFSA",
+     "description": "Inline RF surge arrestor N(F)–N(F)",
+     "quantity": 1,
+     "unit_price": 1578.0,
+     "discount_pct": 10,
+     "cost_code": "300",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 4,
+     "source": "seed",
+     "quote_id": 1,
+     "part_number": "UCE-AC-CC-10LMR",
+     "description": "10 m LMR400 N(M)–N(M)",
+     "quantity": 1,
+     "unit_price": 2415.0,
+     "discount_pct": 10,
+     "cost_code": "300",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 5,
+     "source": "seed",
+     "quote_id": 1,
+     "part_number": "UCE-AC-30DBDISH",
+     "description": "30 dBi dish antenna, 5 GHz",
+     "quantity": 1,
+     "unit_price": 6563.0,
+     "discount_pct": 10,
+     "cost_code": "300",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 6,
+     "source": "seed",
+     "quote_id": 2,
+     "part_number": "UCE-415U-2-C4",
+     "description": "ELPRO 415U-2-C4 I/O gateway, 400–480 MHz, 10 mW–10 W",
+     "quantity": 1,
+     "unit_price": 44031.0,
+     "discount_pct": 10,
+     "cost_code": "200",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 7,
+     "source": "seed",
+     "quote_id": 2,
+     "part_number": "UCE-AC-CC-01B",
+     "description": "1 m RG58 SMA(M)–N(M)",
+     "quantity": 1,
+     "unit_price": 468.0,
+     "discount_pct": 10,
+     "cost_code": "300",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 8,
+     "source": "seed",
+     "quote_id": 2,
+     "part_number": "UCE-LP-RFSA",
+     "description": "Inline RF surge arrestor N(F)–N(F)",
+     "quantity": 1,
+     "unit_price": 1578.0,
+     "discount_pct": 10,
+     "cost_code": "300",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 9,
+     "source": "seed",
+     "quote_id": 2,
+     "part_number": "UCE-AC-CC-10B",
+     "description": "10 m RG213 N(M)–N(M)",
+     "quantity": 1,
+     "unit_price": 1758.0,
+     "discount_pct": 10,
+     "cost_code": "300",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 10,
+     "source": "seed",
+     "quote_id": 2,
+     "part_number": "UCE-AC-D1-C",
+     "description": "2 dBi dipole, N(F), 440 MHz",
+     "quantity": 1,
+     "unit_price": 4952.0,
+     "discount_pct": 10,
+     "cost_code": "300",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 11,
+     "source": "seed",
+     "quote_id": 2,
+     "part_number": "UCE-AB-WM3AL",
+     "description": "Wall and pole bracket",
+     "quantity": 1,
+     "unit_price": 488.0,
+     "discount_pct": 10,
+     "cost_code": "300",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    }
+   ]
+  },
+  "clients": {
+   "next_id": 2,
+   "records": [
+    {
+     "id": 1,
+     "source": "seed",
+     "name": "WEC Projects",
+     "contact_name": "Ruan Kellerman",
+     "email": "ruan.kellerman@wecprojects.com",
+     "notes": "Client per quote register (WEC_Projects).",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    }
+   ]
+  },
+  "client_pos": {
+   "next_id": 2,
+   "records": [
+    {
+     "id": 1,
+     "source": "seed",
+     "po_number": "PO023758",
+     "client_id": 1,
+     "po_date": "2026-09-16",
+     "value_ex_vat": 641032,
+     "vat_rate": 15,
+     "currency": "ZAR",
+     "our_quote_ref": "T_IWECMOL005",
+     "scope": "Molepolole WWTW Telemetry",
+     "status": "Received",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    }
+   ]
+  },
+  "po_milestones": {
+   "next_id": 2,
+   "records": [
+    {
+     "id": 1,
+     "source": "seed",
+     "po_id": 1,
+     "title": "Payment after panel",
+     "status": "Planned",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    }
+   ]
+  },
+  "tests": {
+   "next_id": 4,
+   "records": [
+    {
+     "id": 1,
+     "source": "seed",
+     "ref": "FAT-001",
+     "test_type": "FAT",
+     "title": "Panel test before dispatch / on arrival",
+     "planned_date": "2026-11-27",
+     "result": "Not run",
+     "criteria": "IO and radio link checks per the test sheet; record RSSI and throughput.",
+     "task_id": 11,
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 2,
+     "source": "seed",
+     "ref": "SAT-001",
+     "test_type": "SAT",
+     "title": "SAT: RSSI, iPerf throughput and stability",
+     "result": "Not run",
+     "criteria": "Throughput meets the RF requirement (see Requirements register); 24 h stability run.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    },
+    {
+     "id": 3,
+     "source": "seed",
+     "ref": "SAT-002",
+     "test_type": "SAT",
+     "title": "SCADA integration test",
+     "planned_date": "2026-12-11",
+     "result": "Not run",
+     "task_id": 17,
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    }
+   ]
+  },
+  "meetings": {
+   "next_id": 2,
+   "records": [
+    {
+     "id": 1,
+     "source": "seed",
+     "title": "Project kick-off",
+     "meeting_type": "Kick-off",
+     "meeting_date": "2026-10-28",
+     "start_time": "09:00",
+     "duration_min": 60,
+     "status": "Planned",
+     "agenda": "1. Introductions & roles (RACI)\n2. Scope and deliverables (PO PO023758)\n3. Schedule & key milestones\n4. Procurement & lead times\n5. Panel testing / SAT approach\n6. Open items: IP addresses, 220 V supply, payment, VAT\n7. Next steps",
+     "notes": "Kick-off date from IWECMOL003 Schedule.xlsx. Update the status and capture minutes.",
+     "created_at": "2026-11-03T10:00:00+02:00",
+     "updated_at": "2026-11-03T10:00:00+02:00"
+    }
+   ]
+  },
+  "risks": {
+   "next_id": 1,
+   "records": []
+  },
+  "issues": {
+   "next_id": 1,
+   "records": []
+  }
+ },
+ "source": {
+  "schedule": "IWECMOL003 Schedule.xlsx",
+  "register_record": "excel-1544"
+ }
+}

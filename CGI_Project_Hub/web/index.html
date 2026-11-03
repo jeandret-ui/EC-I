@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CGI Project Hub</title>
+<link rel="icon" href="img/favicon.png">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<aside class="side" id="side">
+  <div class="brand"><img src="img/logo-white.png" alt="CGI"><div class="bt"><b>Project Hub</b><small>Controlgear Instramac</small></div></div>
+  <div class="picker" id="picker" role="button" tabindex="0" title="Switch project"><i class="dot" id="pickDot"></i><div class="pt"><small id="pickCode">Project</small><b id="pickName">Select a project</b></div><span class="chev">▾</span></div>
+  <nav class="nav" id="nav"></nav>
+  <div class="side-foot" id="sideFoot"><i></i><span id="footText">Saved to Local Dashboard Storage</span></div>
+</aside>
+<div class="main">
+  <header class="top">
+    <button class="iconbtn" id="menuBtn" style="display:none" aria-label="Menu">☰</button>
+    <div class="crumb" id="crumb"></div>
+    <div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Search this project…" autocomplete="off"><div class="results" id="qres"></div></div>
+    <button class="iconbtn" id="addBtn" title="Quick add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+    <button class="iconbtn" id="bellBtn" title="Due and overdue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="pip hidden" id="bellPip"></span></button>
+  </header>
+  <section class="content" id="view"><div class="empty"><b>Opening CGI Project Hub…</b>Make sure the hub window is running.</div></section>
+</div>
+<dialog id="dlg"></dialog>
+<dialog id="sheet" class="sheet"></dialog>
+<div id="toasts"></div>
+<script src="js/core.js"></script>
+<script src="js/sched.js"></script>
+<script src="js/portfolio.js"></script>
+<script src="js/project.js"></script>
+<script src="js/plan.js"></script>
+<script src="js/week.js"></script>
+<script src="js/team.js"></script>
+<script src="js/people.js"></script>
+<script src="js/delivery.js"></script>
+<script src="js/commercial.js"></script>
+<script src="js/system.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

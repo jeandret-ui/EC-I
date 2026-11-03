@@ -1,0 +1,179 @@
+{
+  "headline": "Design, supply, configure, install and commission a simple and robust industrial broadband Ethernet radio network connecting the Engineering Office to the WWTW Control Room via the SR3 high site. The solution shall support the existing Rockwell EtherNet/IP/SCADA infrastructure, provide a minimum 200–300 Mbps network throughput, use the approved 5 GHz/microwave architecture, avoid UHF telemetry/polling technology, and minimise operational and maintenance complexity.",
+  "openQuestion": "Is 200–300 Mbps usable throughput per link, aggregate network capacity, or the radio's advertised nominal rate?",
+  "assumption": "Until WUC answers, design to a minimum 300 Mbps measured usable TCP/IP throughput under normal operating conditions on each critical broadband link. This stops a '300 Mbps radio' that only moves 170 Mbps of real traffic from qualifying.",
+  "sr3Note": "The TTA study and Rev 3 specify an omnidirectional antenna at SR3, with directional antennas at the Engineering Office and WWTW aimed at SR3. This was designed before the 200–300 Mbps requirement was known, and TTA §7.6 asks for gains and heights to be reviewed once equipment and throughput are fixed. Ask the RF contractor to prove the omni topology delivers the throughput; if it cannot, propose two directional point-to-point links at SR3 as a deviation for client approval.",
+  "groups": [
+    {
+      "title": "Confirmed client and project requirements",
+      "items": [
+        {
+          "id": "bw",
+          "area": "Bandwidth",
+          "text": "200–300 Mbps transmission capability. The client rejected the ~128 kbps Miri solution as a bottleneck.",
+          "check": "bandwidth",
+          "source": "WUC emails"
+        },
+        {
+          "id": "uhf",
+          "area": "Technology",
+          "text": "No UHF telemetry radios. WUC discontinued that approach because of low bandwidth, polling, complexity and maintenance.",
+          "check": "noUHF",
+          "source": "WUC emails"
+        },
+        {
+          "id": "arch",
+          "area": "Architecture",
+          "text": "Broadband, Ethernet-style communications rather than low-speed polling telemetry.",
+          "check": "broadband",
+          "source": "WUC emails"
+        },
+        {
+          "id": "simple",
+          "area": "Simplicity",
+          "text": "Simple to configure and maintain; avoid complicated systems.",
+          "check": "simplicity",
+          "source": "WUC emails"
+        },
+        {
+          "id": "rel",
+          "area": "Reliability",
+          "text": "Robust, utility-grade installation with adequate RSSL and fade margin; no marginal paths.",
+          "check": "margin",
+          "source": "WUC emails"
+        },
+        {
+          "id": "sites",
+          "area": "Sites in scope",
+          "text": "WWTW Control Room, SR3 and the Engineering Office.",
+          "check": "sites",
+          "source": "Contract 6 package, Sept 2026"
+        },
+        {
+          "id": "sr3",
+          "area": "SR3 role",
+          "text": "Central high site and repeater between the Engineering Office and WWTP.",
+          "check": "viaSR3",
+          "source": "TTA §5.1"
+        },
+        {
+          "id": "direct",
+          "area": "Direct Eng Office → WWTP",
+          "text": "Not allowed: inadequate margin even with a 50 m WWTP mast.",
+          "check": "noDirect",
+          "source": "TTA §7.7, Fig. 11–13"
+        },
+        {
+          "id": "freq",
+          "area": "Frequency",
+          "text": "5.4–5.9 GHz microwave/ISM equipment, nominally 5.8 GHz.",
+          "check": "band",
+          "source": "TTA §4.1–4.2"
+        },
+        {
+          "id": "omni",
+          "area": "SR3 antenna",
+          "text": "Omnidirectional at SR3; higher-gain directional antennas at the Engineering Office and WWTW, aimed at SR3.",
+          "check": "sr3omni",
+          "source": "TTA §5.1, Rev 3"
+        },
+        {
+          "id": "rockwell",
+          "area": "Rockwell integration",
+          "text": "Integrate with the existing Rockwell PLC/SCADA environment (EtherNet/IP); CGI retains PLC/SCADA integration.",
+          "check": "rockwell",
+          "source": "CGI scope"
+        },
+        {
+          "id": "install",
+          "area": "Installation",
+          "text": "Supply plus installation, configuration, onsite testing and commissioning.",
+          "check": "manual",
+          "source": "Original enquiry"
+        }
+      ]
+    },
+    {
+      "title": "RF performance",
+      "items": [
+        {
+          "id": "opmod",
+          "area": "Throughput at the operating modulation",
+          "text": "Prove 300 Mbps at the modulation the link actually runs, not merely that a link closes at −80 dBm (TTA §4.3 basis).",
+          "check": "opmod",
+          "source": "TTA §4.3"
+        },
+        {
+          "id": "recalc",
+          "area": "Recalculate with the real equipment",
+          "text": "Redo link budgets with the selected radio, legal EIRP, channel width, cable losses, interference and availability; review antenna gains and heights.",
+          "check": "manual",
+          "source": "TTA §7.6"
+        },
+        {
+          "id": "heights",
+          "area": "Antenna heights",
+          "text": "At or above the TTA minimum heights: SR3 22 m, WWTP 9 m, Engineering Office 5 m; final heights per the approved construction drawings.",
+          "check": "heights",
+          "source": "TTA Table 2"
+        }
+      ]
+    }
+  ],
+  "process": {
+    "note": "The network carries operational OT data, not just a reporting dashboard. The original enquiry listed five pump stations; the current Contract 6 package is three radio stations.",
+    "items": [
+      "Remote pump run/stop",
+      "Pump operating status",
+      "Wastewater tank level",
+      "Power-failure and system alarms",
+      "Delivery pressure",
+      "Sewage flow rate",
+      "Remote-site security breach monitoring"
+    ]
+  },
+  "physical": [
+    "304 stainless steel enclosures",
+    "IP65",
+    "RAL 7035",
+    "Canopy (sun shield)",
+    "Padlockable"
+  ],
+  "philosophy": {
+    "note": "Simple to understand, simple to maintain, modern, high bandwidth, minimal special telemetry logic. Local plant control stays in the PLC.",
+    "avoid": [
+      "RTU-to-RTU polling",
+      "Proprietary store-and-forward logic",
+      "Protocol conversion",
+      "Multiple gateway layers",
+      "Complicated repeater programming",
+      "Excessive radio nodes"
+    ],
+    "flow": [
+      "Rockwell PLC / network",
+      "Ethernet",
+      "Broadband radio network",
+      "Ethernet",
+      "Rockwell SCADA"
+    ]
+  },
+  "deliverables": [
+    "Final RF network design",
+    "Updated link budgets",
+    "Antenna selection",
+    "Frequency and channel plan",
+    "Equipment datasheets",
+    "Mounting heights",
+    "IP and network configuration",
+    "Radio configuration",
+    "Configuration backups",
+    "Installation",
+    "Alignment",
+    "RSSI/SNR measurements",
+    "Throughput test (iPerf, both directions)",
+    "Link stability test",
+    "Commissioning report",
+    "As-built drawings",
+    "Operation and maintenance documentation"
+  ]
+}

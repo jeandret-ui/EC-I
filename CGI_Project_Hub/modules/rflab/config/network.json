@@ -1,0 +1,564 @@
+{
+  "project": "Molepolole telemetry backhaul (WUC 008, Contract 6)",
+  "sources": [
+    "TTA Radio Link Path Analysis Report Rev 2, 17 Feb 2025",
+    "WEC/CGI Telemetry Proposal Rev 3"
+  ],
+  "statuses": {
+    "sites": [
+      "existing",
+      "construction",
+      "planned",
+      "recommended",
+      "unknown"
+    ],
+    "links": [
+      "communicating",
+      "installed",
+      "planned",
+      "recommended",
+      "not_feasible"
+    ]
+  },
+  "sites": [
+    {
+      "id": "sr3",
+      "name": "SR3 high site",
+      "short": "SR3",
+      "lat": -24.4009,
+      "lon": 25.59775,
+      "role": "relay",
+      "tower_m": 50,
+      "antenna_m": 49,
+      "status": "existing",
+      "owner": "WUC, existing mast",
+      "tta": {
+        "elevation": 1188.68,
+        "antenna_min": 22,
+        "tower": "50 (existing)",
+        "lat": -24.4009,
+        "lon": 25.59775
+      },
+      "note": "Existing 50 m mast. Central repeater for the WEC backhaul and the TTA telemetry network. TTA minimum antenna height 22 m; antenna set 2 m below the mast top (TTA §5.5). Antenna centre-line 1 m below the mast top (TTA §5.5: lightning protection)."
+    },
+    {
+      "id": "wwtp",
+      "name": "WWTP control room",
+      "short": "WWTP",
+      "lat": -24.4304,
+      "lon": 25.55758,
+      "role": "end",
+      "tower_m": 50,
+      "antenna_m": 49,
+      "status": "planned",
+      "owner": "Tower by others (Rev 3)",
+      "tta": {
+        "elevation": 1111.0,
+        "antenna_min": 9,
+        "tower": "12",
+        "lat": -24.4304,
+        "lon": 25.55758
+      },
+      "note": "Rev 3: connection at a 50 m tower by others. TTA minimum: 9 m antenna on a 12 m mast. Antenna centre-line 1 m below the mast top (TTA §5.5: lightning protection)."
+    },
+    {
+      "id": "eng",
+      "name": "Engineer's Office",
+      "short": "Eng. Office",
+      "lat": -24.3707,
+      "lon": 25.54314,
+      "role": "end",
+      "tower_m": 15,
+      "antenna_m": 14,
+      "status": "planned",
+      "owner": "WEC/CGI scope, new 15 m tower",
+      "tta": {
+        "elevation": 1135.62,
+        "antenna_min": 5,
+        "tower": "6",
+        "lat": -24.3707,
+        "lon": 25.54314
+      },
+      "note": "Rev 3: new 15 m tower. TTA minimum: 5 m antenna on a 6 m mast. Antenna centre-line 1 m below the mast top (TTA §5.5: lightning protection)."
+    },
+    {
+      "id": "isr1a",
+      "name": "iSR1a reservoir",
+      "short": "iSR1a",
+      "lat": -24.3582,
+      "lon": 25.43741,
+      "role": "relay",
+      "tower_m": 24,
+      "antenna_m": 22,
+      "status": "recommended",
+      "owner": "TTA telemetry network",
+      "tta": {
+        "elevation": 1240.0,
+        "antenna_min": 10,
+        "tower": "24",
+        "lat": -24.3582,
+        "lon": 25.43741
+      },
+      "note": "Store-and-forward relay for PS1 and PS4. TTA antennas at 10 m (to SR3) and 22 m (to PS1)."
+    },
+    {
+      "id": "ps1",
+      "name": "Pump station 1",
+      "short": "PS1",
+      "lat": -24.4213,
+      "lon": 25.50255,
+      "role": "other",
+      "tower_m": 24,
+      "antenna_m": 20,
+      "status": "recommended",
+      "owner": "TTA telemetry network",
+      "tta": {
+        "elevation": 1124.37,
+        "antenna_min": 20,
+        "tower": "24",
+        "lat": -24.4213,
+        "lon": 25.50255
+      },
+      "note": "Cannot reach SR3; relays via iSR1a. Store-and-forward relay for PS4."
+    },
+    {
+      "id": "ps2",
+      "name": "Pump station 2",
+      "short": "PS2",
+      "lat": -24.4111,
+      "lon": 25.58548,
+      "role": "other",
+      "tower_m": 6,
+      "antenna_m": 4,
+      "status": "recommended",
+      "owner": "TTA telemetry network",
+      "tta": {
+        "elevation": 1138.61,
+        "antenna_min": 4,
+        "tower": "6",
+        "lat": -24.4111,
+        "lon": 25.58548
+      },
+      "note": "Omni link to SR3, 1.67 km."
+    },
+    {
+      "id": "ps3",
+      "name": "Pump station 3",
+      "short": "PS3",
+      "lat": -24.4358,
+      "lon": 25.54324,
+      "role": "other",
+      "tower_m": 18,
+      "antenna_m": 16,
+      "status": "recommended",
+      "owner": "TTA telemetry network",
+      "tta": {
+        "elevation": 1087.08,
+        "antenna_min": 16,
+        "tower": "18",
+        "lat": -24.4358,
+        "lon": 25.54324
+      },
+      "note": "Dish to the SR3 omni, 6.74 km. A direct link to the WWTP is feasible but not recommended."
+    },
+    {
+      "id": "ps4",
+      "name": "Pump station 4",
+      "short": "PS4",
+      "lat": -24.4208,
+      "lon": 25.50411,
+      "role": "other",
+      "tower_m": 6,
+      "antenna_m": 3,
+      "status": "recommended",
+      "owner": "TTA telemetry network",
+      "tta": {
+        "elevation": 1121.18,
+        "antenna_min": 3,
+        "tower": "6",
+        "lat": -24.4208,
+        "lon": 25.50411
+      },
+      "note": "Short 170 m link to PS1."
+    },
+    {
+      "id": "ps5",
+      "name": "Pump station 5",
+      "short": "PS5",
+      "lat": -24.4264,
+      "lon": 25.60643,
+      "role": "other",
+      "tower_m": 6,
+      "antenna_m": 4,
+      "status": "recommended",
+      "owner": "TTA telemetry network",
+      "tta": {
+        "elevation": 1131.92,
+        "antenna_min": 4,
+        "tower": "6",
+        "lat": -24.4264,
+        "lon": 25.60643
+      },
+      "note": "Omni link to SR3, 2.96 km."
+    }
+  ],
+  "links": [
+    {
+      "id": "eng-sr3",
+      "a": "eng",
+      "b": "sr3",
+      "scope": "WEC Rev 3 backhaul",
+      "status": "planned",
+      "antA": "rd5g30",
+      "antB": "amo5g13",
+      "hA": null,
+      "hB": null,
+      "fc": 5785,
+      "bw": 20,
+      "tta": {
+        "hA": 5,
+        "hB": 22,
+        "gA": 28,
+        "gB": 13,
+        "lossA": 1,
+        "lossB": 1,
+        "tx": 26,
+        "dist": 6.47,
+        "diff": 0,
+        "rssl": -59.03,
+        "figure": 4
+      },
+      "note": "Equipment follows the selected architecture."
+    },
+    {
+      "id": "sr3-wwtp",
+      "a": "sr3",
+      "b": "wwtp",
+      "scope": "WEC Rev 3 backhaul",
+      "status": "planned",
+      "antA": "amo5g13",
+      "antB": "rd5g30",
+      "hA": null,
+      "hB": null,
+      "fc": 5785,
+      "bw": 20,
+      "tta": {
+        "hA": 22,
+        "hB": 9,
+        "gA": 13,
+        "gB": 28,
+        "lossA": 0,
+        "lossB": 0,
+        "tx": 26,
+        "dist": 5.22,
+        "diff": 0,
+        "rssl": -55.14,
+        "figure": 6
+      },
+      "note": "Equipment follows the selected architecture."
+    },
+    {
+      "id": "isr1a-sr3",
+      "a": "isr1a",
+      "b": "sr3",
+      "scope": "TTA telemetry network",
+      "status": "recommended",
+      "antA": "rd5g30",
+      "antB": "amo5g13",
+      "hA": 10,
+      "hB": 22,
+      "fc": 5785,
+      "bw": 20,
+      "tta": {
+        "hA": 10,
+        "hB": 22,
+        "gA": 28,
+        "gB": 13,
+        "lossA": 1,
+        "lossB": 1,
+        "tx": 26,
+        "dist": 16.94,
+        "diff": 0,
+        "rssl": -67.48,
+        "figure": 2
+      },
+      "note": ""
+    },
+    {
+      "id": "ps1-isr1a",
+      "a": "ps1",
+      "b": "isr1a",
+      "scope": "TTA telemetry network",
+      "status": "recommended",
+      "antA": "rd5g30",
+      "antB": "rd5g30",
+      "hA": 20,
+      "hB": 22,
+      "fc": 5785,
+      "bw": 20,
+      "tta": {
+        "hA": 20,
+        "hB": 22,
+        "gA": 28,
+        "gB": 28,
+        "lossA": 0,
+        "lossB": 0,
+        "tx": 26,
+        "dist": 9.62,
+        "diff": 0,
+        "rssl": -45.49,
+        "figure": 3
+      },
+      "note": ""
+    },
+    {
+      "id": "ps3-sr3",
+      "a": "ps3",
+      "b": "sr3",
+      "scope": "TTA telemetry network",
+      "status": "recommended",
+      "antA": "rd5g30",
+      "antB": "amo5g13",
+      "hA": 16,
+      "hB": 22,
+      "fc": 5785,
+      "bw": 20,
+      "tta": {
+        "hA": 16,
+        "hB": 22,
+        "gA": 28,
+        "gB": 13,
+        "lossA": 1,
+        "lossB": 1,
+        "tx": 26,
+        "dist": 6.74,
+        "diff": 0,
+        "rssl": -59.38,
+        "figure": 5
+      },
+      "note": ""
+    },
+    {
+      "id": "ps2-sr3",
+      "a": "ps2",
+      "b": "sr3",
+      "scope": "TTA telemetry network",
+      "status": "recommended",
+      "antA": "amo5g13",
+      "antB": "amo5g13",
+      "hA": 4,
+      "hB": 22,
+      "fc": 5785,
+      "bw": 20,
+      "tta": {
+        "hA": 4,
+        "hB": 22,
+        "gA": 13,
+        "gB": 13,
+        "lossA": 1,
+        "lossB": 1,
+        "tx": 26,
+        "dist": 1.67,
+        "diff": 0,
+        "rssl": -62.24,
+        "figure": 7
+      },
+      "note": ""
+    },
+    {
+      "id": "sr3-ps5",
+      "a": "sr3",
+      "b": "ps5",
+      "scope": "TTA telemetry network",
+      "status": "recommended",
+      "antA": "amo5g13",
+      "antB": "amo5g13",
+      "hA": 22,
+      "hB": 4,
+      "fc": 5785,
+      "bw": 20,
+      "tta": {
+        "hA": 22,
+        "hB": 4,
+        "gA": 13,
+        "gB": 13,
+        "lossA": 1,
+        "lossB": 1,
+        "tx": 26,
+        "dist": 2.96,
+        "diff": 0,
+        "rssl": -67.18,
+        "figure": 8
+      },
+      "note": ""
+    },
+    {
+      "id": "ps1-ps4",
+      "a": "ps1",
+      "b": "ps4",
+      "scope": "TTA telemetry network",
+      "status": "recommended",
+      "antA": "amo5g13",
+      "antB": "amo5g13",
+      "hA": 5,
+      "hB": 5,
+      "fc": 5785,
+      "bw": 20,
+      "tta": {
+        "hA": 5,
+        "hB": 5,
+        "gA": 13,
+        "gB": 13,
+        "lossA": 1,
+        "lossB": 1,
+        "tx": 26,
+        "dist": 0.17,
+        "diff": 0,
+        "rssl": -42.2,
+        "figure": 9
+      },
+      "note": "TTA table prints +42.20; the sign is a typo."
+    },
+    {
+      "id": "eng-wwtp",
+      "a": "eng",
+      "b": "wwtp",
+      "scope": "Studied by TTA",
+      "status": "not_feasible",
+      "antA": "rd5g30",
+      "antB": "rd5g30",
+      "hA": 12,
+      "hB": 50,
+      "fc": 5785,
+      "bw": 20,
+      "tta": {
+        "hA": 12,
+        "hB": 50,
+        "gA": 13,
+        "gB": 13,
+        "lossA": 0,
+        "lossB": 0,
+        "tx": 26,
+        "dist": 6.77,
+        "diff": 14.65,
+        "rssl": -87.07,
+        "figure": 13
+      },
+      "note": "Escarpment ridge about 6 km from the office blocks the path."
+    },
+    {
+      "id": "eng-ps3",
+      "a": "eng",
+      "b": "ps3",
+      "scope": "Studied by TTA",
+      "status": "not_feasible",
+      "antA": "rd5g30",
+      "antB": "rd5g30",
+      "hA": 12,
+      "hB": 50,
+      "fc": 5785,
+      "bw": 20,
+      "tta": {
+        "hA": 12,
+        "hB": 50,
+        "gA": 21,
+        "gB": 21,
+        "lossA": 0,
+        "lossB": 0,
+        "tx": 26,
+        "dist": 7.21,
+        "diff": 31.67,
+        "rssl": -90.64,
+        "figure": 15
+      },
+      "note": ""
+    }
+  ],
+  "validation": [
+    {
+      "id": "v11",
+      "a": "eng",
+      "b": "wwtp",
+      "hA": 6,
+      "hB": 12,
+      "gA": 13,
+      "gB": 13,
+      "lossA": 0,
+      "lossB": 0,
+      "tx": 26,
+      "dist": 6.77,
+      "diff": 64.79,
+      "rssl": -137.2,
+      "figure": 11
+    },
+    {
+      "id": "v12",
+      "a": "eng",
+      "b": "wwtp",
+      "hA": 12,
+      "hB": 12,
+      "gA": 13,
+      "gB": 13,
+      "lossA": 0,
+      "lossB": 0,
+      "tx": 26,
+      "dist": 6.77,
+      "diff": 64.86,
+      "rssl": -137.28,
+      "figure": 12
+    },
+    {
+      "id": "v14",
+      "a": "eng",
+      "b": "ps3",
+      "hA": 12,
+      "hB": 12,
+      "gA": 20,
+      "gB": 20,
+      "lossA": 0,
+      "lossB": 0,
+      "tx": 26,
+      "dist": 7.21,
+      "diff": 38.6,
+      "rssl": -97.57,
+      "figure": 14
+    }
+  ],
+  "actions": [
+    {
+      "id": "bocra",
+      "text": "Confirm the BOCRA EIRP limits and permitted bands (5470–5725 and 5725–5875 MHz) in writing.",
+      "done": false
+    },
+    {
+      "id": "survey",
+      "text": "Run a 5 GHz spectrum survey at SR3, WWTP and the Engineer's Office before choosing channels.",
+      "done": false
+    },
+    {
+      "id": "thr",
+      "text": "Confirm with WUC whether 200–300 Mbps means aggregate TCP/IP, one direction, or radio PHY rate.",
+      "done": false
+    },
+    {
+      "id": "chan",
+      "text": "Fix the channel plan: two 80 MHz channels do not fit in 5725–5875 MHz.",
+      "done": false
+    },
+    {
+      "id": "pstat",
+      "text": "Confirm on site which pump-station and iSR1a masts already exist.",
+      "done": false
+    },
+    {
+      "id": "sr3pwr",
+      "text": "Design SR3 power autonomy, surge protection and earthing (single point of failure).",
+      "done": false
+    },
+    {
+      "id": "fatsat",
+      "text": "Write FAT/SAT procedures: iPerf both directions, RSSI against prediction, comms-loss alarms.",
+      "done": false
+    }
+  ]
+}
